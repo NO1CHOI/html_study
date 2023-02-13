@@ -1,2 +1,2 @@
 # html_study
-html송부
+html공부
