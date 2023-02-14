@@ -5,5 +5,6 @@
 <p>h1~h3은 검색키워드로 활용 가능하다. h4~h6 꼭 필요한 경우만 사용하거나 권장하지않음</p>
 <p> block과 inline 태그는 의미에 맞게 외부/내부 구조로 구성해서 사용해야 한다.(의미 중첩되지 않도록)</p>
 <hr>
-<h2>23.02.14 -html -문서 태그</h2>
+<h2>23.02.14 -html -문서 태그+내비게이션 개념</h2>
 <p>&lt;strong&gt;&lt;em&gt;&lt;sub&gt;&lt;sup&gt;&lt;del&gt;&lt;blockquote&gt;&lt;q&gt;&lt;code&gt;&lt;address&gt;&lt;hr&gt;</p>
+<p>gnb , lnb , snb , fnb ,  Breadcrumbs</p>
