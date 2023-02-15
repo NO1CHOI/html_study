@@ -9,3 +9,17 @@
 <p>&lt;strong&gt;&lt;em&gt;&lt;sub&gt;&lt;sup&gt;&lt;del&gt;&lt;blockquote&gt;&lt;q&gt;&lt;code&gt;&lt;address&gt;&lt;hr&gt;</p>
 <p>gnb , lnb , snb , fnb ,  Breadcrumbs</p>
 <blockquote cite="https://webty.tistory.com/85"> 유나쌤 블로그 참고= https://webty.tistory.com/85 </blockquote>
+<hr>
+<h2>23.02.15 - HTML - 순차/비순차 목록 태그</h2>
+<p>ol,ul,li</p>
+<h3><em>ol,ul 사용법</em></h3>
+<p>OL 이란?</p>
+<ol>
+<li>순서있는 목록1</li>
+<li>순서있는 목록2</li>
+</ol>
+<p>UL 이란?</p>
+<ul>
+<li>순서없는 목록1</li>
+<li>순서없는 목록2</li>
+</ul>
