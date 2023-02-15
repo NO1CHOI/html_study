@@ -15,11 +15,11 @@
 <h3><em>ol,ul 사용법</em></h3>
 <p>OL 이란?</p>
 <ol>
-<li>순서있는 목록1</li>
-<li>순서있는 목록2</li>
+<li>ol은 순서가 있는 목록의 틀이다.</li>
+<li>li의 <strong>부모는 ol,ul만</strong> 가능하다.</li>
 </ol>
 <p>UL 이란?</p>
 <ul>
-<li>순서없는 목록1</li>
-<li>순서없는 목록2</li>
+<li>ul,ol,li 순서있는 목록 없는 목록 구분 호가실히 해야한.</li>
+<li>li의 <strong>형제 태그</strong>는 li만 올 수 있으니 나머지 태그는 그 자식,자손 태그에 삽입 해야한다.</li>
 </ul>
