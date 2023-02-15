@@ -10,7 +10,7 @@
 <p>gnb , lnb , snb , fnb ,  Breadcrumbs</p>
 <blockquote cite="https://webty.tistory.com/85"> 유나쌤 블로그 참고= https://webty.tistory.com/85 </blockquote>
 <hr>
-<h2>23.02.15 - HTML - 순차/비순차 목록 태그</h2>
+<h2>23.02.15 - HTML - 순차/비순차,정의형 목록 비교</h2>
 <p>ol,ul,li</p>
 <h3><em>ol,ul 사용법</em></h3>
 <p>OL 이란?</p>
@@ -23,3 +23,10 @@
 <li>ul,ol,li 순서있는 목록 없는 목록 구분 호가실히 해야한.</li>
 <li>li의 <strong>형제 태그</strong>는 li만 올 수 있으니 나머지 태그는 그 자식,자손 태그에 삽입 해야한다.</li>
 </ul>
+<p><em>dl,dt,dd 사용법</em></p>
+<dl>
+<h2>&lt;dl&gt;&lt;h2&gt;단어·숙어&lt;h2&gt;&lt;dl&gt;</h2>
+<dt>&lt;dt&gt;web>&lt;dt&gt;</dt>
+<dd>&lt;dd&gt;1.<em>명사</em> (=spider's web)&lt;/dd&gt;</dd>
+<dd>2.<em>명사</em> (복잡하게 연결된)=망[거미줄]</dd>
+</dl>
