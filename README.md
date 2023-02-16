@@ -30,3 +30,25 @@
 <dd>&lt;dd&gt;1.<em>명사</em> (=spider's web)&lt;/dd&gt;</dd>
 <dd>2.<em>명사</em> (복잡하게 연결된)=망[거미줄]</dd>
 </dl>
+<hr>
+<div class="study">
+  <h2>23.02.16-HTML-시맨틱태크.그릅태그</h2>
+  <dl>
+    <dt class=skip">Sementic 태그</dt>
+    <dd>&lt;header&gt;</dd>
+    <dd>&ltnav&gt;</dd>
+    <dd>&ltaside&gt;</dd>
+    <dd>&ltsection&gt;</dd>
+    <dd>&ltfooter&gt;</dd>
+    <dd>&ltarticle&gt;</dd>
+    <dd>&ltfigure&gt;</dd>
+    <dd>&ltdetails&gt;</dd>
+    <dd>&ltmain&gt;</dd>
+  </dl>
+</div>
+
+
+
+
+
+
