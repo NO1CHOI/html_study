@@ -54,7 +54,52 @@
                    <h2>23-02-18 ~ 23-02-19 복습</h2>
                    <p>0213~0217 배웠던거 복습</p>
                    <hr>
-                   
+<h2>23-02-20-Html:Table</h2>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>태그명</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">block</td>
+<td>&lt;tr&gt;</td>
+<td>가로형 태그</td>
+</tr>
+<tr>
+<td>&lt;td&gt;</td>
+<td>내용(열)태그</td>
+</tr>
+<tr>
+<td>&lt;th&gt;</td>
+<td>제목(열)태그</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
