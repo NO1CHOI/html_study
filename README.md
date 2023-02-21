@@ -79,21 +79,21 @@
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<hr>
+<h2>23-02-21-Html:form</h2>
+<form action="#" method="get">
+<fieldset>
+<legend>form 퀴즈</legend>
+<span> 1.다음 중 label for 와 연관된 input 속성은?</span><br>
+<label><input type="radio" name="quiz" value="id">1.id</label><br>
+<label><input type="radio" name="quiz" value="class">2.class</label><br>
+<label><input type="radio" name="quiz" value="name">3.name</label><br>
+<span>2.form에서 이 [ ] 를 넣으면 수정이 불가능하다 무엇인가?<br>
+<label><input type="radio" name="quiz" value="readonly">1.readonly</label><br>
+<label><input type="radio" name="quiz" value="autofocus">2.autofocus</label><br>
+<label><input type="radio" name="quiz" value="maxlength">3.maxlength</label><br>
+</fiedset>
+</form>
 
 
 
