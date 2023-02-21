@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>회원가입양식</legend>
+            <dl>
+                <dt>아이디</dt>
+                <dd><input type="text" autofocus placeholder="아이디를 입력하세요." name="user_id" maxlength="7"></dd>
+                <dt>비밀번호</dt>
+                <dd><input type="password" placeholder="비밀번호 입력하세요." name="user_pw"></dd>
+                <dt>주민등록번호</dt>
+                <dd><input type="number" name="regist_first"> -
+                    <input type="password" name="regi_last"></dd>
+                <dt>이메일</dt>
+                <dd><input type="email" name="user_mail_id">
+                @
+                <select name="mail_address">
+                    <option value="none">이메일을 선택하세요.</option>
+                    <option value="google">google.com</option>
+                    <option value="naver">naver.com</option>
+                    <option value="kakao">kakako.com</option>
+                </select>
+                </dd>
+                <dt>연락처</dt>
+                <dd>
+                    <select name="telecom">
+                        <option value="none">통신사를 선택하세요.</option>
+                        <option value="kt">KT</option>
+                        <option value="skt">SKT</option>
+                        <option value="lg">LG U+</option>
+                    </select>
+                </dd>
+                <dd>010 - <input type="number" maxlength="4" name="user_ph_first"> -
+                    <input type="number" maxlength="4" name="user_ph_last"></dd>
+                <dt>나의 보물 1호는? 비밀번호 질문 답</dt>
+                <dd><textarea name="find_pw_answer" rows="5" cols="50"></textarea></dd>
+                <dt>관심사</dt>
+                <dd>
+                    <label><input type="checkbox">HTML</label>
+                    <input type="checkbox" id="hobby_css" value="hobby_css" name="hobby">
+                    <label for="hobby_css">CSS</label>
+                    <input type="checkbox" id="hobby_js">
+                    <label for="hobby_js">Javascript</label>
+                </dd>
+                <dt>성별</dt>
+                <dd>
+                    <label><input type="radio" name="gender" value="male">남</label>
+                    <label><input type="radio" name="gender" value="female" checked>여</label>
+                    <label><input type="radio" name="gender" value="none">동의안함</label>
+                </dd>
+                <dt>선호하는 음료</dt>
+                <dd>
+                    <select name="hobby2">
+                        <optgroup label="커피">
+                            <option value="ame">아메리카노</option>
+                            <option value="co_la">카페 라떼</option>
+                            <option value="mo_la">모카 라떼</option>
+                        </optgroup>
+                        <optgroup label="티(tea)">
+                            <option value="t1">얼그레이티</option>
+                            <option value="t2">자스민티</option>
+                        </optgroup>
+                    </select>
+                </dd>
+                </dl>
+                <div class="btn_g">
+                    <button type="reset">취소</button>
+                    <button type="submit">가입</button>
+                    <button type="button">범용기능</button>
+                </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
