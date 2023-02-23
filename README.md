@@ -98,8 +98,27 @@
 <div class="login">
                     <p><button type="submit">로그인</button></p>
                 </div>
-
-
+<hr>
+<h2><23-02-23:Html /CSS</h2>
+<p>reset css 코드</p><br>
+<p>html,body,h1,h2,h3,h4,h5,h6,
+p,ul,ol,li,blockquote,dl,dt,dd,address,video,
+strong,em,del,s,sup,sub,code,q,code,img,a,
+table,tr,th,td,thead,tbody,tfoot,
+form,fieldset,legend,input,label,textarea,option,section,button,
+header,main,footer,article,section,aside,nav,figure,figcaption,div,span<br>
+    {
+    margin:0; padding:0; <br>
+    font-size:1.0rem;<br>
+    font-weight:normal;<br>
+    font-style:normal;<br>
+    line-height:1.0;<br>
+    list-style:none;<br>
+    }<br>
+a {text-decoration: none; color: #000;}
+table,tr,th,td {border-collapse:collapse;}
+button {cursor:pointer; border:none; background:none;}</p>
+<p>css 주석<br> 1.HTML태그 꾸미는 대상 확인 <br>2.위 태그가 가족관계에 속해있는지 확인</p>
 
 
 
