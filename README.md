@@ -107,7 +107,7 @@ strong,em,del,s,sup,sub,code,q,code,img,a,
 table,tr,th,td,thead,tbody,tfoot,
 form,fieldset,legend,input,label,textarea,option,section,button,
 header,main,footer,article,section,aside,nav,figure,figcaption,div,span<br>
-    {
+    {<br>
     margin:0; padding:0; <br>
     font-size:1.0rem;<br>
     font-weight:normal;<br>
