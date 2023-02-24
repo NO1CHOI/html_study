@@ -119,8 +119,56 @@ a {text-decoration: none; color: #000;}
 table,tr,th,td {border-collapse:collapse;}
 button {cursor:pointer; border:none; background:none;}</p>
 <p>css 주석<br> 1.HTML태그 꾸미는 대상 확인 <br>2.위 태그가 가족관계에 속해있는지 확인</p>
+<hr>
+<h2>23-02-24:HTML/CSS</h2>
+<p>폰트 크기<br>
+font-size: 16px;<br>
+font-size: 1rem;<br></p>
 
+<p>행간<br>
+line-height: 1.5;<br>
+line-height: 150%;<br>
+line-height: 150px;<br></p>
 
+<p>자간<br>
+letter-spacing: 0;<br>
+letter-spacing: -0.5px;<br>
+letter-spacing: -0.05em;<br></p>
+
+<p>단어 사이 자간<br>
+word-spacing: 0;<br>
+word-spacing: 1px;</p><br>
+
+<p>글자 사이 공백<br>
+white-space: normal;<br>
+white-space: nowrap;<br>
+white-space: pre;<br>
+white-space: pre-line;<br>
+white-space: pre-wrap;</p><br>
+
+<p>글자 굵기<br>
+font-weight: 400;<br>
+font-weight: 700;</p><br>
+
+<p>대소문자 변환<br>
+text-transform: lowercase;<br>
+text-transform: uppercase;<br>
+text-transform: capitalize;</p><br>
+
+<p>글자 기울기<br>
+font-style: italic;</p><br>
+
+<p>밑줄, 취소선<br>
+text-decoration: underline;<br>
+text-decoration: line-through;</p><br>
+
+<p>선 넣기<br>
+border-top: 1px solid black;<br>
+border-bottom: 1px solid black;<br>
+border: 1px solid black;<br>
+border-left: none;<br>
+border-right: none;<br>
+</p>
 
 
 
