@@ -1,0 +1,25 @@
+.a {
+    background-color:darkcyan;
+    font-size:3rem;
+    display:inline-block;
+    width:300px;height:200px;
+}
+.b {
+    font-size:5rem;
+    background-color:tan;
+    display:inline-block;
+    width:200px;height:150px;
+}
+.box {width:100px; height:100px;}
+.c {
+    background-color: crimson;
+}
+.d {
+    background-color: burlywood;
+    padding:20px 10px;
+    /* 
+    box-sizing:border-box;
+    width:50px; height: 80px; */
+    /* margin: 요소와 요소 그 사이를 조절
+    padding: 요소와 그 안 내용 사이를 조절*/
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+* {box-sizing:border-box;}/* 전체선택자 */
 
 html,body,h1,h2,h3,h4,h5,h6,
 p,ul,ol,li,blockquote,dl,dt,dd,address,video,
@@ -25,3 +26,4 @@ header,main,footer,article,section,aside,nav,figure,figcaption,div,span
 a {text-decoration: none; color: #000;}
 table,tr,th,td {border-collapse:collapse;}
 button {cursor:pointer; border:none; background:none;}
+.skip {display:none;}

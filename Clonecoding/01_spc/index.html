@@ -12,12 +12,17 @@
     <!-- 외부스타일시트 -->
     <link href="./styles/reset.css" rel="stylesheet" type="text/css">
     <link href="./styles/main.css" rel="stylesheet" type="text/css">
+    <!-- fvicon -->
+    <link rel="shortcut icon" href="./images/people.png" type="image/x-icon">
+<link rel="icon" href="./images/people.png" type="image/x-icon">
+<!--fontaeswem -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <h1><a href="#"><img src="./images/logo.png" alt="SPC삼립"></a></h1>
         <nav>
-            <a href="#">COMPANY</a>
+            <a href="#" class="active">COMPANY</a>
             <a href="#">BRANDS</a>
             <a href="#">IR</a>
             <a href="#">SNS</a>
@@ -29,10 +34,17 @@
         </div>
     </header>
     <main>
-        <div class="bg">
+        <div class="bg_path border">
             <dl class="top">
-                <dt>현재 페이지 경로</dt>
-                <dd>HOME<span>Company</span> SPC삼립 소개 <em>경영이념</em></dd>
+                <dt class="skip">현재 페이지 경로</dt>
+                <dd>
+                    <i class="fa-solid fa-star" title="홈으로"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span>Company</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    SPC삼립 소개 
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <em>경영이념</em></dd>
             </dl>
         </div>
         <div class="bg_w">
@@ -57,13 +69,13 @@
         <div class="bg">
             <div class="contents">
                 <h2>GOAL</h2>
-                <ul>
-                    <li>매출 2.7조</li>
+                <ul class="goal_list"> 
+                    <li class="first">매출 2.7조</li>
                     <li>영업이익 5%</li>
-                    <li>기업가치 2.5조</li>
+                    <li class="last">기업가치 2.5조</li>
                 </ul>
                 <h2>STRATEGY</h2>
-                <ul>
+                <ul class="st_list">
                     <li>
                         <h3>Value Up</h3>
                         <p>브랜드 및 고부가 제품 라인업 강화</p>
@@ -96,8 +108,8 @@
                 <a href="#">동반성장</a>
             </div>
             <div class="ft_right">
-                <a href="#">FAMILY SHTES</a>
-                <a href="#">SITE MAP</a>
+                <a href="#" >FAMILY SHTES</a>
+                <a href="#" >SITE MAP</a>
             </div>
         </div>
         <address>고객센터 전화번호 080-739-8572 (월~금 09:00~17:00)<br>경기도 시흥시 공단1대로 101(정왕동) (주)SPC삼립 대표이사 황종현</address>
