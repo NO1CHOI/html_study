@@ -1,0 +1,30 @@
+h2 {
+    font-size:1.875rem;
+    line-height:1.5;
+    letter-spacing: -0.2em;
+    font-style: italic;
+}
+.start .a {
+    font-size: 1.563rem;
+    line-height:2;
+    letter-spacing: 0.2em;
+    font-weight: 900px;
+    text-decoration:underline;
+
+
+}
+.start .b {
+    font-size: 1.563rem;
+    line-height:2;
+    letter-spacing: 0.5em;
+    background-color: salmon;
+    display:inline-block;
+    
+
+}
+.start .c {
+    font-size: 1.563rem;
+    line-height:2;
+    letter-spacing: 0.2em;
+    text-decoration:line-through;
+}
