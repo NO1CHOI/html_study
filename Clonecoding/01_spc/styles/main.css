@@ -1,15 +1,55 @@
+/* all_layout */
+header,
+main > div > *,
+/* main .bg_path .top,
+main .bg_w .title,
+main .bg .contetns,
+main .bg_w .contents, */
+footer .ft_top,
+footer address,
+footer > p {
+/*     border:2px solid red; */
+    width: 1200px; margin:0 auto;
+}
+main > div > * {
+    text-align:center;
+}
 /* header */
-header {}
-header h1 {}
+header {
+    height:92px;
+}
+header h1 {
+    float:left;
+    padding-top:5px;
+}
 header h1 a {}
 header h1 a img {width:60px;}
-header nav {}
+header nav {
+    float:left;
+    line-height: 92px;
+    margin-left:300px;
+}
 header nav a {
     font-size:1.063em;
+    padding-left:30px;
 }
-header nav .active {color:#36b4e5;}
-header .lnb {}
+header nav .active {
+    padding:0;
+    color:#36b4e5;
+}
+header .lnb {
+    float:right;
+    line-height: 92px;
+}
 header .lnb a {}
+header .lnb a:nth-child(2):before {
+    content:'|';
+    display:inline;
+    padding-left:10px;
+    margin-left:10px;
+    padding-right:15px;
+
+}
 /* main */
 main {}
 /* 공통배경 */
@@ -29,7 +69,9 @@ main .border {
 main .bg_path {background-color: :#f1f1f1;}
 main .bg_path .top {padding:20px 0;}
 main .bg_path .top dt {}
-main .bg_path .top dt dd {}
+main .bg_path .top dd {
+    text-align: right;
+}
 main .bg_path .top dt dd span {}
 main .bg_path .top dt dd em {}
 /* 경영이념 제목 */
@@ -56,16 +98,31 @@ main .bg_w .contents p {
     line-height:1.5;
     letter-spacing:-0.02rem;
 }
+main .bg_w .contents p:nth-child(2) {
+    margin-bottom:100px;
+}
 /* font-size:31px */
 /* 경영이념 GOAL,STRATEGY */
 main .bg .contents h2 {
     font-size:1.250rem;
     margin-bottom:30px;
 }
-main .bg .contents ul {}
+main .bg .contents ul {
+/*     overflow:hidden; */
+    display:inline-block;
+    /* flot의 부모 높이 0처리 오류해결방벙으로 display:inline-block도 가능하다.*/
+}
+main .bg .contents h2:nth-child(3) {
+    background-color: #f3c300;
+}
 main .bg .contents .goal_list li {
     height:250px; width:250px;
     border-radius:50%;
+    line-height: 250px;
+    float:left;
+/*     display:inline-block; */
+    box-shadow: 0 0 10px gray;
+    margin-left:-20px;
 }
 main .bg .contents ul li {
     font-size:1.5rem;
@@ -82,23 +139,30 @@ main .bg .contents ul li h3 {
 }
 main .bg .contents .st_list li {
     height:180px; width:180px;
-    border-radius:125px;
+    border-radius:50%;
+    /*     display: inline-block; */
+    float:left;
+    padding: 55px 20px 0;
+    /* box-shadow: x y blur color; */
+    box-shadow: 0 0 10px gray;
 }
 main .bg .contents ul li p {
 }
 /* footer */
-footer {}
-footer .ft_top {}
-footer .ft_top .ft_left {}
+footer {
+    padding:50px 0px;
+}
+footer .ft_top {overflow:hidden;}
+footer .ft_top .ft_left {float:left;}
 footer .ft_top .ft_left a {
     font-weight:700;
     line-height:1.5;
 }
-footer .ft_top .ft_right {}
+footer .ft_top .ft_right {float:right;}
 footer .ft_top .ft_right a {
     display:inline-block;
     padding:10px 20px;
-    border:1px solid #aaa
+    border:1px solid #aaa;
 }
 footer address {}
 footer address+p {}
