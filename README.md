@@ -36,14 +36,14 @@
   <dl>
     <dt class=skip">Sementic 태그</dt>
     <dd>&lt;header&gt;</dd>
-    <dd>&ltnav&gt;</dd>
-    <dd>&ltaside&gt;</dd>
-    <dd>&ltsection&gt;</dd>
-    <dd>&ltfooter&gt;</dd>
-    <dd>&ltarticle&gt;</dd>
-    <dd>&ltfigure&gt;</dd>
-    <dd>&ltdetails&gt;</dd>
-    <dd>&ltmain&gt;</dd>
+    <dd>&lt;nav&gt;</dd>
+    <dd>&lt;aside&gt;</dd>
+    <dd>&lt;section&gt;</dd>
+    <dd>&lt;footer&gt;</dd>
+    <dd>&lt;article&gt;</dd>
+    <dd>&lt;figure&gt;</dd>
+    <dd>&lt;details&gt;</dd>
+    <dd>&lt;main&gt;</dd>
   </dl>
 </div>
 <hr>
