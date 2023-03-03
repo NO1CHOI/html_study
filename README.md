@@ -172,6 +172,30 @@ border-right: none;<br>
 <hr>
 <h2> 23-03-02</h2>
 <p>clonecording - 웹접근성로그인</p>
+<hr>
+<h2>23-03-03:html / css 속성 선택자</h2>
+<p>text-overflow:ellipsis;/* 외부처 말줄임..... <br>
+    white-space:nowrap;/* 한줄처리 (개행X) <br>
+    overflow:hidden;/* 정해진 크기안에서만보이기 <br> 
+</p>
+<p>
+점을 선말고 면으로 만들어서 넣기 <br>
+.notice ul li::before<br>
+{
+    content:'';display:inline-block; <br>
+    width:4px; height: 4px;<br>
+    background-color: gray;<br>
+    position:absolute;<br>
+    left:-5px; top:13px;<br>
+    /* width:5px; height:5px;<br>
+    content:'';<br>
+    background-color: black; display:inline-block;<br>
+    border-radius:50%;<br>
+    position:relative;<br>
+    right:3px; bottom:3px; */<br>
+}<br>
+</p>
+
 
 
 
