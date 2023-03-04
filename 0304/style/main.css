@@ -1,0 +1,23 @@
+.container {
+    background-color:lightblue;
+    width: 600px; height: 400px;
+}
+.container .contents {}
+.container .contents h2 {
+    background-color: yellowgreen;
+}
+.container .contents ul {
+    background-color: blanchedalmond;
+    overflow: hidden;
+}
+.container .contents ul li {
+    float:left;
+    width:50%;
+    text-overflow:ellipsis;/* 외부처비 말줄임..... */
+    white-space:nowrap;/* 한줄처리 (개행X) */
+    overflow:hidden;/* 정해진 크기안에서만보이기 */
+}
+.container .contents ul li span {
+    float:right;
+    margin-left:20px;
+}
