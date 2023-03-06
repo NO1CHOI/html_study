@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width:700px; height: 500px;
+            background:lightblue;
+            display:flex;
+            padding:10px;
+            margin:100px;
+        }
+        .container * {
+            width:200px; height:200px;
+            border: 2px solid #000;
+            font-size:2rem;
+            text-align:center; line-height:100px;
+        }
+        .container:nth-child(1) {
+            flex-flow:row wrap;
+            justify-content:center;
+            align-content:center;
+        }
+        .container:nth-child(2) {
+            flex-flow:row nowrap;
+            align-items:flex-end;
+        }
+        .container:nth-child(3) {
+            width:500px;
+            flex-flow:row-reverse wrap;
+        }
+        .container:nth-child(4) {
+            width:500px;
+            flex-flow:row wrap;
+            justify-content:flex-end;
+            align-content:space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

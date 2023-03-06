@@ -7,16 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>table-03</title>
-    <style>
-        table,tr,td,th{border:2px solid darkblue}
-    </style>
+    <link href="./style/reset.css" rel="stylesheet" type="text/css">
+    <link href="./style/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h2>요금제</h2>
-    <table>
+    <table id="t">
         <thead>
             <tr>
-                <th rowspan="2">이미지</th>
+                <th rowspan="2">img</th>
                 <th colspan="4">선불요금제<br><span>합리적인 선불요금제에 국제전화 혜택을 더한 알뜰한 요금제!</span></th>
                 <!-- <th>3</th>
                 <th>4</th>
@@ -33,21 +31,21 @@
         <tbody>
             <tr>
                 <th scope="row">국제 선불 300M</th>
-                <td><span>40,700원</span></td>
+                <td><span>40,700</span><em>원</em></td>
                 <td>집/이동전화 무제한(국제전화 매일 20분)</td>
                 <td>기본제공</td>
                 <td>300MB+3Mbps</td>
             </tr>
             <tr>
                 <th>국제 선불 11G</th>
-                <td><span>55,000원</span></td>
+                <td><span>55,000</span><em>원</em></td>
                 <td>집/이동전화 무제한(국제전화 매일 20분)</td>
                 <td>기본제공</td>
                 <td>11GB+3Mbps</td>
             </tr>
             <tr>
                 <th>국제 선불 11G스페셜</th>
-                <td><span>59,000원</span></td>
+                <td><span>59,000</span><em>원</em></td>
                 <td>집/이동전화 무제한(국제전화 매일 20분)</td>
                 <td>기본제공</td>
                 <td>11GB+일2GB+3Mbps</td>
@@ -56,7 +54,7 @@
     </table>
 <hr>
 <h2>요금제 가입하기</h2>
-<table>
+<table id="t2">
     <thead>
         <tr>
             <th>업체</th>

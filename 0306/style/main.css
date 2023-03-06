@@ -1,0 +1,41 @@
+#wrap {
+    background-color:lightblue;
+}
+#wrap > * {
+    width:1000px;
+    margin: 0 auto;
+}
+#wrap header {
+    background-color:lavenderblush;
+    height:100px
+}
+#wrap nav {
+    background-color:cornflowerblue;
+    height:50px;
+    text-align:center;
+    position:sticky; top:0;
+}
+#wrap nav a {
+    line-height:50px;
+    margin-right:20px;
+}
+#wrap nav a:last-child {margin-right:0;}
+#wrap section {
+    background:coral;
+    height:300vh;
+    position:relative;
+}
+#wrap section * {
+    width:200px;
+    height:200px;
+}
+#wrap section h1 {
+    background:teal;
+    position:absolute; left:0; top:0;
+    z-index:2;
+}
+#wrap section h2 {
+    background:pink;
+    position:absolute; left:100px; top:100px;
+    z-index:1;
+}

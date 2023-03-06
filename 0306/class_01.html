@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style/reset.css" rel="stylesheet" type="text/css">
+    <style>
+        .container {
+            background-color:lightblue;
+            padding:20px 0;
+            display:flex;
+            /* flex-direction:row;
+            flex-wrap:wrap; */
+            flex-flow:row wrap;
+            justify-content:flex-start;
+            /* align-content:center; */
+            height:500px;
+            align-items:flex-end;
+        }
+        .container > * {
+            width:100px; height: 100px;
+            border: 2px solid #000;
+            font-size:2rem;
+            text-align:center; line-height:100px;
+        }
+        .container .item:nth-child(3n) {align-self:flex-start;}
+        .container .item:nth-child(1) {flex-grow:1}
+        .container .item:nth-child(2) {flex-grow:1}
+        .container .item:nth-child(3) {flex-grow:2}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div calss="item">1</div>
+        <div calss="item">2</div>
+        <div calss="item">3</div>
+        <!-- <div calss="item">4</div>
+        <div calss="item">5</div>
+        <div calss="item">6</div>
+        <div calss="item">7</div>
+        <div calss="item">8</div>
+        <div calss="item">9</div>
+        <div calss="item">10</div> -->
+    </div>
+</body>
+</html>

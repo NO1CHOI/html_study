@@ -1,0 +1,55 @@
+#t {
+    weight:1200px;
+    margin:50px auto 0;
+    border-top:3px solid #333;
+}
+#t thead {
+    background-color:#fafafa;
+    height:150px;
+}
+#t thead tr {
+}
+#t thead tr:nth-child(2) {
+    border-top:1px dashed #999;
+}
+#t thead tr th {
+    line-height:1.5;
+    padding:40px 0;
+}
+#t thead tr:first-child th:first-child {
+    background-image:url(../images/pay_table_02.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#t thead tr th span {
+    color: gray;
+}
+/* #t tbody {}
+#t tbody tr {
+    border-top:1px solid #e5e5e5;
+}
+#t tbody tr th {
+    line-height:4;
+}
+#t tbody tr td {
+    padding-left:40px;
+}
+#t tbody tr td span {
+    color:#ec018c;
+    font-weight:900;
+}
+#t tbody tr em {
+    font-weight:900;
+} */
+
+#t tbody {}
+#t tbody tr {}
+#t tbody tr th {}
+#t tbody tr th {}
+#t tbody tr th, #t tbody tr td {
+    text-align: center; padding:25px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+#t tbody tr th em {}
+#t tbody tr td span {color:#ec018c}
+#t tbody tr td span, #t tbody tr th em span {font-weight: 700;}
