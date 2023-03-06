@@ -195,6 +195,12 @@ border-right: none;<br>
     right:3px; bottom:3px; */<br>
 }<br>
 </p>
+<hr>
+<h2>23-03-06 : HTML</h2>
+<p>CSS / Position</p>
+<p>position:sticky(필수) / left , right , top , bottom(보조)</p>
+<p>position 중첩순서 속성 :  z-index</p>
+<p>CSS3 : flex레이아웃( flexible box )기본과 활용</p>
 
 
 
