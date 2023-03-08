@@ -1,0 +1,17 @@
+#wrap {background:aqua;}
+#wrap header {background:gray;}
+#wrap header h1 {background:lime;}
+#wrap header h1 {background:beige;}
+#wrap header nav {backgound:pink;}
+#wrap header .lnb {background:yellow;}
+
+#wrap main {backgrond:hotpink;}
+#wrap main .visual {background:lightgray;}
+#wrap main .bnrr {background:purple;}
+#wrap main .bnr a {background:green;}
+
+#wrap footer {backgroud:black;}
+#wrap footer p {bacground:gray;}
+#wrap footer p em {bacground:yellowgreen;}
+#wrap footer p em {font-weight:600;}
+#wrap footer p em:first-child {font-weight:400;}
