@@ -201,7 +201,17 @@ border-right: none;<br>
 <p>position:sticky(필수) / left , right , top , bottom(보조)</p>
 <p>position 중첩순서 속성 :  z-index</p>
 <p>CSS3 : flex레이아웃( flexible box )기본과 활용</p>
-
-
+<hr>
+<h2>23-3-09:서울시청</h2>
+<p>    transform:scale(1.1);<br>
+    /* transfrom 속성은 기준점을 요소의 중심으로 인식한다. */<br>
+    transition:all 0.3s;<br>
+    /* css 수치값이 변화가 일어날때 애니메이션 적용 */<br>
+    /* ex) 100-> 220 값변화 0 */<br>
+    /* ex) row -> column 값변화 x */<br>
+    /* position:absolute; left:50%; top:50%;<br>
+    transform: translate(-50%, -50%); */<br>
+}
+/* width 속성의 경우 -> 왼쪽상단 기준점으로 인해 우측하단으로만 이미지가 확대된다. */</p>
 
 
