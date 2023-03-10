@@ -1,0 +1,16 @@
+/* 1220px */
+main {
+    background: url(../image/bg1.png) no-repeat;
+}
+main .top {width:1220px; margin:0 auto;
+}
+main .top .logo {}
+main .top .logo a {}
+main .top .t_wrap {}
+main .top .t_wrap p {}
+main .top .t_wrap p span {}
+main .top .t_wrap a {}
+main .top .t_wrap a img {}
+main .top .btm_wrap {}
+main .top .btm_wrap a {}
+main .top .btm_wrap a img {}
