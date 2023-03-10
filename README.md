@@ -213,5 +213,7 @@ border-right: none;<br>
     transform: translate(-50%, -50%); */<br>
 }
 /* width 속성의 경우 -> 왼쪽상단 기준점으로 인해 우측하단으로만 이미지가 확대된다. */</p>
-
+<hr>
+<h2>23-3-10:HTML</h2>
+<p>CSS : Gradient 다양한 색상 적용(그라디언트)</p>
 
