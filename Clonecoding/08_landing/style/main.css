@@ -1,16 +1,133 @@
 /* 1220px */
-main {
-    background: url(../image/bg1.png) no-repeat;
+/* main------------------------------------------------------------------- */
+#visual_bg {
+    background: url(../image/bg1.png) center;
+    background-size:cover;
+    background-attachment:fixed;
 }
-main .top {width:1220px; margin:0 auto;
+#visual_bg #visual_bg_gra {
+    background: linear-gradient(0deg, #000, transparent 50%);
+    /* background: linear-gradient(360deg, rgba(0,0,0,0.7), transparent 40%) */
 }
-main .top .logo {}
-main .top .logo a {}
-main .top .t_wrap {}
-main .top .t_wrap p {}
-main .top .t_wrap p span {}
-main .top .t_wrap a {}
-main .top .t_wrap a img {}
-main .top .btm_wrap {}
-main .top .btm_wrap a {}
-main .top .btm_wrap a img {}
+#visual_bg #visual_bg_gra .container {
+    width:1220px; margin:0 auto;
+    padding: 300px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+}
+#visual_bg #visual_bg_gra .container .logo {
+    position:absolute; left:0;top:0;
+    width:50px;
+}
+#visual_bg #visual_bg_gra .container .logo a {}
+#visual_bg #visual_bg_gra .container .logo a img {width:100%;}
+#visual_bg #visual_bg_gra .container .title {margin-bottom:20px;}
+#visual_bg #visual_bg_gra .container .title,
+#visual_bg #visual_bg_gra .container .title em {
+    color:white;
+    line-height:1.3;
+    letter-spacing:-0.02em;
+    font-size:50px;
+}
+#visual_bg #visual_bg_gra .container .title em {font-weight:700;}
+#visual_bg #visual_bg_gra .container .sponsor {}
+#visual_bg #visual_bg_gra .container .sponsor img {}
+#visual_bg #visual_bg_gra .container .question {
+    position:absolute; right:0; bottom:250px;
+}
+#visual_bg #visual_bg_gra .container .question img {}
+/* main2-------------------------------------------------------------- */
+#quiz_bg {
+    background: url(../image/quiz_bg.png) center;
+    padding:100px;
+}
+#quiz_bg .container {
+    width:1220px; margin: 0 auto;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items: center;
+}
+#quiz_bg .container .left {
+    color:white;
+    margin-left:200px;
+}
+#quiz_bg .container .left #quizFrm {}
+#quiz_bg .container .left #quizFrm fieldset {}
+#quiz_bg .container .left #quizFrm fieldset legend {}
+#quiz_bg .container .left #quizFrm fieldset h1 {
+    text-align: center;
+    font-size:50px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+#quiz_bg .container .left #quizFrm fieldset h2 {
+    font-size:1.3rem;
+    letter-spacing:-0.02em;
+    font-weight:700;
+    margin-bottom:20px;
+}
+#quiz_bg .container .left #quizFrm fieldset ul {}
+#quiz_bg .container .left #quizFrm fieldset ul li {
+    padding-bottom:30px;
+}
+#quiz_bg .container .left #quizFrm fieldset ul li input[name=quiz] {}
+#quiz_bg .container .left #quizFrm fieldset ul li label {font-size:1.3rem;}
+#quiz_bg .container .left #quizFrm fieldset p {
+    text-align: center;
+    background: #222;
+    border-radius: 50px;
+    margin:30px 0 0 ;
+    padding:20px;
+}
+#quiz_bg .container .left #quizFrm fieldset p .quiz_answer {
+    color:white;
+}
+#quiz_bg .container .right {}
+#quiz_bg .container .right p {
+    color:white;
+    text-align: center;
+    font-weight:700;
+    padding:10px;
+}
+#quiz_bg .container .right p img {width:100%}
+/* main3--------------------------------------------------------------------- */
+/* campaigm 통합 ---------------------------------------- */
+.campaign_bg {}
+.campaign_bg .container {width:1220px; margin:0 auto; padding:100px 0;}
+.campaign_bg .container h1,
+.campaign_bg .container h1 > * {    
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height:1.5;}
+/* campaign1~7 배경 모음 */
+.campaign1 {background: url(../image/video_bg.png); }
+.campaign2 {background: url(../image/50_bg.png);}
+.campaign3 {background: #eee;}
+.campaign4 {background: url(../image/50_bg.png);}
+.campaign5 {background: url(../image/wwf.jpg);}
+.campaign6 {background: url(../image/50_bg.png);}
+.campaign7 {background: url(../image/bg2.png);}
+.campaign_bg {background-size:cover; background-position:center;}
+/* campaign1 --------------------------- */
+.campaign_bg {}
+.campaign1 {background: url(../image/video_bg.png);}
+.campaign1 .container {
+    width:1220px; margin:0 auto; padding:100px 0;
+    display:flex;
+    flex-flow:column wrap; align-items: center;
+}
+.campaign1 .container h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height:1.5;
+}
+.campaign1 .container iframe {margin:20px;}
+.campaign1 .container .sponsor {
+    display:block;
+}
+.campaign1 .container .sponsor img {}

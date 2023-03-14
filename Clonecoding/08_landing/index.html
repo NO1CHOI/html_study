@@ -11,23 +11,94 @@
     <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    <main>
-        <div class="top">
-            <div class="logo">
-                <a href="#">
-                    <img src="./image/logo.jpg" alt="wwf로고">
-                </a>
-            </div>
-            <div class="t_wrap">
-                <p>생존의 벼랑 끝에 서 있는<br><span>북극곰을 지켜주세요</span></p>
-                <a href="#">
-                    <img src="./image/btn.png" alt="북극곰 후원하기">
-                </a>
-            </div>
-            <div class="btm_wrap">
-                <a href="#"><img src="./image/first_btn2.png" alt="후원관련 자주 묻는 질문 보기"></a>
+    <div id="visual_bg">
+        <div id="visual_bg_gra">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="#"><img src="./image/logo.jpg" alt="WWF"></a>
+                </h1>
+                <h1 class="title">생존의 벼랑 끝에 서있는 <br><em>북극곰을 지켜주세요</em></h1>
+                <a href="#" class="sponsor"><img src="./image/btn.png" alt="북극곰 후원하기"></a>
+                <a href="#" class="question"><img src="./image/first_btn2.png" alt="후원관련 자주 묻는 질문 보기"></a>
             </div>
         </div>
-    </main>
+    </div>
+    <div id="quiz_bg">
+        <div class="container">
+            <div class="left">
+                <form action="#" method="get" id="quizFrm">
+                    <fieldset>
+                        <legend class="skip">퀴즈양식</legend>
+                        <h1>Quiz</h1>
+                        <h2>20년 사이 북극 빙하 면적은 몇 % 감소했을까요?</h2>
+                        <ul>
+                            <li>
+                                <input type="radio" name="quiz" value="q30" id="q30">
+                                <label for="q30">30%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz" value="q40" id="q40">
+                                <label for="q40">40%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz" value="q50" id="q50">
+                                <label for="q50">50%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz" value="q60" id="q60">
+                                <label for="q60">60%</label>
+                            </li>
+                        </ul>
+                        <p><button type="button" class="quiz_answer">정답 확인 하기</button></p>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="right">
+                <p><img src="./image/quiz_contents.png" alt="귀즈 참여 현황 5529명 참여"></p>
+                <p>*퀴즈 참여 현황은 매주 업데이트 됩니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="campaign1 campaign_bg">
+        <div class="container">
+            <h1>죽은 어미 곁을 떠나지 못하는 <br> 새끼 북극곰의 이야기</h1>
+            <iframe width="825" height="581" src="https://www.youtube.com/embed/DwYrNQ4K3rY" title="WWF와 함께 북극곰을 지켜주세요." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#" class="sponsor"><img src="./image/btn.png" alt="북극곰 후원하기"></a>
+        </div>
+    </div>
+    <div class="campaign2 campaign_bg">
+        <div class="container">
+            <h1>최근 20년 사이 북극의 빙하 면적은 <br>
+            <em>50%</em>감소하였습니다.</h1>
+        </div>
+    </div>
+    <div class="campaign3 campaign_bg">
+        <div class="container">
+            <h1>빙하가 녹으면 인류 재앙으로 돌아옵니다</h1>
+        </div>
+    </div>
+    <div class="campaign4 campaign_bg">
+        <div class="container">
+            <h1>북극곰의 위기는<br>
+            <em>지구 전체의 위기</em>입니다</h1>
+        </div>
+    </div>
+    <div class="campaign5 campaign_bg">
+        <div class="container">
+            <h1>"믿을 수 있는 환경보전 단체 WWF"</h1>
+        </div>
+    </div>
+    <div class="campaign6 campaign_bg">
+        <div class="container">
+            <h1>북극곰 보호에 참여하시면<br>
+                감사 선물을 드립니다</h1>
+        </div>
+    </div>
+    <div class="campaign7 campaign_bg">
+        <div class="container">
+            <h1>북극곰의 위기,<br>
+            지켜볼 수 만은 없습니다</h1>
+        </div>
+    </div>
 </body>
 </html>
