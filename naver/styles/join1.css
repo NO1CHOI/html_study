@@ -1,0 +1,47 @@
+/* 취소 확인 box height= 90px; */
+/* width:460px (전체넓이) width:350px(맨 첫 index넓이) width:770px; (언어변경포함) /
+/* height:55px (취소,확인,인증번호받기) 60px,50px(입력란)  */
+/* letter-spacing:-0.02em; font-weight:800;
+    font-size 13px=0.813rem; 18px=1.125rem */
+/* #08a600 #8e8e8e(박스틀 등 연한 부분) #f5f6f7(바탕색) #eee(인증번호배경) #fff(글씨색)  */
+
+.wrap {}
+/* 언어설정---------- */
+.wrap .main_top {}
+.wrap .main_top .lang {}
+.wrap .main_top .lang select {}
+.wrap .main_top .lang select option {}
+/* 로고------------ */
+.wrap .main_btm {}
+.wrap .main_btm h2 {}
+.wrap .main_btm h2 a {}
+.wrap .main_btm h2 a img {}
+/* 이용약관 시작 ------------- */
+.wrap .main_btm .container {}
+.wrap .main_btm .container form {}
+.wrap .main_btm .container form fieldset {}
+.wrap .main_btm .container form fieldset legend {}
+.wrap .main_btm .container form fieldset label {}
+.wrap .main_btm .container form fieldset label input {}
+.wrap .main_btm .container form fieldset dl {}
+.wrap .main_btm .container form fieldset dl dt {}
+.wrap .main_btm .container form fieldset dl dt input {}
+.wrap .main_btm .container form fieldset dl dt input em {}
+.wrap .main_btm .container form fieldset dl dt input span {}
+.wrap .main_btm .container form fieldset dl dt a {}
+.wrap .main_btm .container form fieldset dl dt a span {}
+.wrap .main_btm .container form fieldset dd {}
+.wrap .main_btm .container form fieldset dd .box {}
+.wrap .main_btm .container form fieldset dd .box h1 {}
+.wrap .main_btm .container form fieldset dd .box p {}
+/* 취소&확인 선 --------------------- */
+.wrap .main_btm .container .container_btm {}
+.wrap .main_btm .container .container_btm .no {}
+.wrap .main_btm .container .container_btm .ok {} 
+.wrap .main_btm .container p {} 
+.wrap .main_btm .container p a {}
+/* footer 시작 --------------------- */
+footer {}
+footer .f_wrap {}
+footer .f_wrap a {}
+footer address {}
