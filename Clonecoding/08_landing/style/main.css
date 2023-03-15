@@ -112,6 +112,16 @@
 .campaign6 {background: url(../image/50_bg.png);}
 .campaign7 {background: url(../image/bg2.png);}
 .campaign_bg {background-size:cover; background-position:center;}
+/* campaign 1~7 제목 근접 단락 통일 */
+.campaign_bg .container h1+p {
+    font-size:1.2rem; letter-spacing:-0.02em;
+    line-height:1.6;
+}
+/* campaign 2,4 제목 포인트 ------------------ */
+.campaign_bg .container h1 em {
+    background: white;
+    color: #000; padding:8px 2px ;
+}
 /* campaign1 --------------------------- */
 .campaign_bg {}
 .campaign1 {background: url(../image/video_bg.png);}
@@ -131,3 +141,108 @@
     display:block;
 }
 .campaign1 .container .sponsor img {}
+/* campaign2 -------------*/
+.campaign2 .container {}
+.campaign2 .container h1 {color:#fff;}
+.campaign2 .container h1+p {
+    color:#fff;
+    padding:20px 0;
+}
+.campaign2 .container p:last-child {}
+.campaign2 .container p:last-child img {width:100%;}
+/* campaign3-------------- */
+.campaign3 .container {}
+.campaign3 .container h1 {text-align: center;}
+.campaign3 .container h1+p {
+    text-align: center;
+    padding:20px 0 50px;
+}
+.campaign3 .container ul {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.campaign3 .container ul li {
+    width:32%; /* (100-4)/3  으로 계산한다.*/
+    padding-top:35px;
+    background-size: cover; background-position:center -150px;
+}
+.campaign3 .container ul li:nth-child(1) {background-image:url(../image/28.png);}
+.campaign3 .container ul li:nth-child(2) {background-image:url(../image/27.png);}
+.campaign3 .container ul li:nth-child(3) {background-image:url(../image/332.png);}
+.campaign3 .container ul li h2 {
+    color:#fff;
+    font-size: 3rem;
+    font-weight:600;
+    text-align: center;
+}
+.campaign3 .container ul li p {
+    color:#fff;text-align: center;
+    font-size:1.7rem;
+}
+.campaign3 .container ul li p:nth-child(2) {padding:25px 0 120px;}
+.campaign3 .container ul li p:last-child {
+    color:#000;
+    background: #fff;
+    padding:20px;
+    height:250px;
+    font-size:1.2rem;
+    font-weight:700;
+    line-height: 1.5;
+}
+/* campaign4--------------------------------------------- */
+.campaign4 {}
+.campaign4 .container {}
+.campaign4 .container h1 {color:#fff;padding:20px 0;}
+.campaign4 .container h1 em {
+    color:#000;
+}
+.campaign4 .container p {
+    color:#fff;
+    font-size:1.5rem;
+    font-weight: 600;
+    padding:25px 0;
+}
+.campaign4 .container p img {width:100%}
+/* campaign5--------------------------------------------- */
+.campaign5 {position:relative;}
+.campaign5::before {
+    /* 배경 Rgba 위치 */
+    background: rgba(225,225,225,0.5);
+    content:'';
+    display:inline-flex;
+    width:100%;
+    height:100%;
+    position:absolute; left:0; top:0;
+    z-index:10;
+}
+.campaign5 .container {
+    text-align: center;
+    position:relative; z-index:20;
+}
+.campaign5 .container h1 {}
+.campaign5 .container p  {
+    padding:20px;
+}
+.campaign5 .container p:last-child  {
+    font-size:1.2rem;
+}
+/* campaign6--------------------------------------------- */
+.campaign6 {}
+.campaign6 .container {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+}
+.campaign6 .container h1 {}
+.campaign6 .container a {}
+.campaign6 ul {display:flex;}
+.campaign6 ul li {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+}
+.campaign6 ul li img {width:100%;}
+.campaign6 ul li p {}
+.campaign6 p {}
+/* campaign7--------------------------------------------- */
