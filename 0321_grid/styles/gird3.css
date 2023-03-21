@@ -1,0 +1,24 @@
+.container {
+    width:1200px; margin:0 auto;
+    display:grid;
+    grid-template-areas:
+    'big s1 s2'
+    'big s3 s4'
+    'big s5 s6'
+    ;
+}
+.container > * img {width:100%}
+.container .big {grid-area:big; margin-right:20px;}
+.container .big a {}
+.container .big a span {}
+.container .big a img {}
+.container .small {padding-bottom:20px;margin-right:10px;}
+.container .small a {}
+.container .small a span {}
+.container .small a img {}
+.container .small a:nth-child(2) {grid-area:s1;}
+.container .small a:nth-child(3) {grid-area:s2;}
+.container .small a:nth-child(4) {grid-area:s3;}
+.container .small a:nth-child(5) {grid-area:s4;}
+.container .small a:nth-child(6) {grid-area:s5;}
+.container .small a:nth-child(7) {grid-area:s6;}

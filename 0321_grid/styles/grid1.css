@@ -1,0 +1,24 @@
+.container {
+    background:lightblue;
+    display:grid;
+    /* grid-template-rows:100px 50px 50px 100px; */
+    /* grid-template-rows:repeat(4,100px); */
+    /* grid-template-rows:50px repeat(3,50px); */
+    /* grid-template-rows:repeat(4,minmax(150px, 300px)); */
+    /* grid-template-rows:[트랙명] 트랙값 [트랙명] 트랙값 */
+    /* grid-template-rows:[header] 50px [nav] 100px [main] 150px [footer] 200px; */
+    /* grid-template-columns:200px 300px; */
+    /* grid-template-rows:100px 200px; */
+    /* ----grid-2부 연습------------------------------- */
+    grid-template-areas:
+        'item1 item2' 
+        'item1 item3' 
+        'item1 item4';
+        grid-template-rows:repeat(2, 50px) 100px;
+        grid-template-columns:repeat(2,1fr);
+}
+.container .item {}
+.container .item:nth-child(1) {background:red; grid-area:item1;}
+.container .item:nth-child(2) {background: orange;grid-area:item2;}
+.container .item:nth-child(3) {background: yellow;grid-area:item3;}
+.container .item:nth-child(4) {background: green;grid-area:item4;}

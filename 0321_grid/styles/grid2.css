@@ -1,0 +1,17 @@
+.container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows:repeat(2, 400px); */
+    background-color: aquamarine;
+    max-width:1200px;
+    margin:0 auto;
+}
+.container a {padding:0 0 50px;}
+.container a p {}
+.container a p img {width: 100%;}
+@media screen and (max-width:768px){
+    .container {
+        max-width:calc(100%-30px);
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
