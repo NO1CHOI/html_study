@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0328-1</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box;}
+        .box {width:100px; height:100px; border:2px solid #000;
+            background: lightblue; text-align: center; line-height: 100px;
+        }
+        .box:nth-child(1) {animation:width 0.5s both;}
+        .box:nth-child(2) {animation:width 1s alternate infinite;}
+        .box:nth-child(3) {animation:rotate-opacity 0.5s alternate 2;}
+        .box:nth-child(4) {animation:rotate-opacity 1s alternate-reverse infinite;}
+        .box:nth-child(5) .box {
+            transition:
+            background-color 0.5s 1s,
+            color 2s;
+        }
+        .box:nth-child(5):hover .box {
+            background-color: lightcoral;
+            color:yellow;
+        }
+        @keyframes width {
+            0% {width:100px;}
+            100% {width:200px;}
+        }
+        @keyframes rotate-opacity {
+            0% {opacity:0; transform:translateX(0) rotate(0);}
+            100% {opacity:1; transform: translateX(200px) rotate(20deg);}
+        }
+        /* hover,tansition VS animation.Keyframes */
+        /* animatiion,Keyframes 마우스 이벤트 없이 애니메이션 재생 가능 */
+        /* animatiion,Keyframes + JS 다양한 이벤트와 활용한 재생 가능 */
+        /* hover,tansition 마우스 이벤트로만 애니메이션 재생 가능 */
+    </style>
+</head>
+<body>
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E
+        <div class="box">F</div>
+    </div>
+</body>
+</html>
