@@ -1,0 +1,46 @@
+/* 프로필사진 :200x200px , icon = 25x25px */
+body {
+    background:url(../images/7598163.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+main .photo {
+    width: 200px; height: 200px;
+    border-radius:50%; overflow: hidden;
+    border:10px solid #fff;
+}
+main .photo img {width:100%;}
+main h1 {
+    padding:30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+main .loading {}
+main .loading .bar {}
+main p {
+    padding:30px;
+    font-weight: 700;
+}
+main .sns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+main .sns a {
+    width:25px; height: 25px;
+}
+main .sns a img {width:100%;}
+main .sns a .tip {}
+main .gnb {}
+main .gnb span {}
+main .gnb span:nth-child(1) {}
+main .gnb span:nth-child(2) {}
+main .gnb span:nth-child(3) {}
