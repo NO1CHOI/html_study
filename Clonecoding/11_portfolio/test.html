@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text gradient</title>
+    <style>
+        h1 {
+            font-size:5rem;
+            /* 배경을 사용해서 배경에 그라디언트 넣기 */
+            background: linear-gradient(to right, pink , aqua, pink);
+            
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-size: 400%;
+            animation: bg 10s linear infinite;
+        }
+        @keyframes bg {
+            0% {background-position-x: 100%;}
+            100% {background-position-x: 400%;}
+        }
+        /*
+        -webkit- 이란?
+        CSS의 새로운 명령어를 인식하지 못하는 브라우저를 처리하기위해
+        엣지.파이어폭스.크롬에서 해당 CSS3 새로운 명령을 인식시키기 위한 키워드
+        */
+        </style>
+</head>
+<body>
+    <h1>Gradient</h1>
+</body>
+</html>

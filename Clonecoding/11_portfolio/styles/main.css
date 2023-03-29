@@ -1,5 +1,17 @@
 /* 프로필사진 :200x200px , icon = 25x25px */
+/* #ff00ff,#00ffff */
+
+/* Scrollbar css(chrome) */
+::-webkit-scrollbar {width: 10px; height: 10px;}
+::-webkit-scrollbar-track {background: black;}
+::-webkit-scrollbar-thumb {
+    background: lemonchiffon; border-radius: 5px;
+}
+
+
+
 body {
+    overflow-x: hidden;
     background:url(../images/7598163.jpg) center;
     background-size: cover;
     background-attachment: fixed;
@@ -16,15 +28,38 @@ main .photo {
     width: 200px; height: 200px;
     border-radius:50%; overflow: hidden;
     border:10px solid #fff;
+    animation: up 2s linear alternate infinite;
 }
+
+/* photo 에 마우스 오버 시 bar 변화 주기 */
+main .photo:hover ~ .loading .bar {transform: scaleX(1);}
 main .photo img {width:100%;}
 main h1 {
+    font-family: 'Lobster', cursive;
+    text-transform: capitalize;
     padding:30px;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    /* 글자에 그라디언트 넣기 */
+    background: linear-gradient(to right, #ff00ff,#fff, #00ffff, #ff00ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:400%;
+    animation: bg 10s linear infinite;
 }
-main .loading {}
-main .loading .bar {}
+main .loading {    
+    width:300px; height: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main .loading .bar {
+    background: #ff00ff; display: block;
+    width:100%; height: 10px;
+    transform: scaleX(0); 
+    transition: all 3s ease;
+    transform-origin:left top;
+}
 main p {
     padding:30px;
     font-weight: 700;
@@ -35,12 +70,96 @@ main .sns {
     justify-content: center;
 }
 main .sns a {
-    width:25px; height: 25px;
+    width:25px;
+    margin-right:20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
+main .sns a:last-child {margin:0;}
 main .sns a img {width:100%;}
-main .sns a .tip {}
-main .gnb {}
-main .gnb span {}
-main .gnb span:nth-child(1) {}
-main .gnb span:nth-child(2) {}
-main .gnb span:nth-child(3) {}
+main .sns a .tip {
+    font-family: 'Lobster', cursive;
+    text-transform: capitalize;
+    background: #222; color: #fff; padding: 5px;
+    margin-top:10px;
+    opacity: 0;
+}
+main .sns a:hover .tip {opacity: 1;}
+/* gnb 메뉴 */
+main .gnb {
+    width: 30px; height: 25px;
+    display: block;
+    position:relative;
+}
+main .gnb span {
+    background: #222; width: 100%; height: 5px;
+    display: block; position:absolute;
+    border-radius: 10px;
+    transition:  all 0.3s;
+}
+main .gnb span:nth-child(1) {top:0;}
+main .gnb span:nth-child(2) {top:10px;}
+main .gnb span:nth-child(3) {bottom:0;}
+/* gnb-hover */
+main .gnb:hover span:nth-child(1) {transform:translateY(10px) rotate(45deg);}
+main .gnb:hover span:nth-child(2) {opacity: 0;}
+main .gnb:hover span:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
+/* main - bg */
+.bg {}
+.bg > div {
+    background:url(../images/bg_new.png) repeat-x;
+    width: 150%; height:100px;
+}
+.bg .txt1 {
+    transform: rotate(-10deg) translateX(-100px);
+    animation:txt1 150s linear infinite;
+}
+.bg .txt2 {
+    filter:invert(1); background-color: #fff;
+    background-position-y:5px ;
+    transform: rotate(10deg) translateX(-100px);
+    animation:txt1 150s linear alternate-reverse infinite ;
+}
+/* project  margin:7px  grid 사용해보기*/
+.project {
+    margin:200px 0;
+}
+.project .project_container {
+    max-width:1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+}
+.project .project_container a {
+    background: url(../images/cat.jpg);
+    background-size: cover;
+    height: 350px;
+    margin-right:7px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;
+    transition: all 0.5s;
+}
+/* hover */
+.project .project_container a:hover {
+    background-size: auto 105%;
+    box-shadow: 5px 5px 10px rgb(0,0,0.8);
+}
+.project .project_container a .intro {
+    background:#fff; padding:20px;
+    position:absolute;bottom:0;width:100%;
+    text-align: center;
+}
+.project .project_container a .intro h1 {}
+.project .project_container a .intro h2 {}
+.project .project_container a .intro p {}
+footer {
+    padding:100px;
+    color:#fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 3px 2px black, 0 3px 2px #333;
+}
