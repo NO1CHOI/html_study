@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-6</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body, html {background: #eee;}
+        .wrap {transform-style:preserve-3d;}
+        .wrap .card {transition: all 1s; width:500px;}
+        .wrap .card img {width:100%;}
+        .wrap .front {backface-visibility: hidden;}
+        .wrap .back {backface-visibility: visible;}
+        .wrap .card:hover {transform:rotateY(180deg);}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card front"><img src="./images/front.png" alt=""></div>
+        <div class="card back"><img src="./images/back.png" alt=""></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body {text-align: center; overflow: hidden;}
+        #go {
+            position:fixed;
+            left:25px;top:25px; border-radius: 10px;
+            padding:20px; background: lightblue; color: #fff;
+        }
+        #perspective {
+            background: lightcoral;
+            display:inline-flex;
+            padding:30px; margin-top:200px;
+            /* transform-style: perserve-3d;/* 부모 내의 자식을 3차원 대상인식
+            perspective: 100px;사람과 화면상의 거리 */
+        }
+        #perspective .box {
+            background: lightgreen;
+            width:200px; height: 200px;
+            transition: all 0.5s; margin:100px;
+            animation: ts3d 5s linear alternate infinite;
+        }
+        /* #go:hover ~ #perspective .box{
+            transform:perspective(200px) rotateX(20deg);
+        } */
+        @keyframes ts3d {
+            0% {transform:rotateX(0) skew(0) scale(1)}
+            50% {transform:rotateX(30deg) skew(15deg) scale(1.5)}
+            100% {transform:rotateX(60deg) skew(30deg) scale(2)}
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="go">GO</button>
+    <div id="perspective">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-4</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* #f68a16 */
+        body {background: #f68a16; overflow-x: hidden;}
+        .perspective {
+            text-align: center;
+        }
+        .perspective .box {
+            background: url(./images/burger1.jpg);
+            background-position: -70px -150px;
+            background-size: 150%;
+            border-radius: 10px;
+            margin-top:300px;
+            width:250px;height:250px;
+            display: inline-flex;
+            border:10px solid #fff;
+            animation: first 0.5s ease;
+        }
+        .perspective .box:nth-child(1) {
+            animation: first 0.5s ease, third 0.5s alternate 4 0.5s;
+        }
+        .perspective .box:nth-child(2) {
+            animation: first 0.5s ease, second 0.5s alternate 4 0.5s;
+        }
+        .perspective .box img {width:100%;}
+        /* animation */
+        @keyframes first {
+            0% {transform: translateY(-300px) scale(0.5);}
+            100% {transform: translateY(0) scale(1);}
+        }
+        @keyframes second {
+            0% {transform: translateX(0);}
+            100% {transform:translateX(700px);}
+        }
+        @keyframes third {
+            0% {transform: translateX(0);}
+            100% {transform:translateX(-700px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="perspective">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
