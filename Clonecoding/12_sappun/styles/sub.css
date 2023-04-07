@@ -1,0 +1,113 @@
+main {
+  width: 1200px;
+  background: lightcoral;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row-nowrap;
+}
+main .container {
+  background: lightblue;
+  width: calc(100% - 380px);
+}
+main aside {
+  background: lemonchiffon;
+  width: 380px;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+main aside .like {
+  display: inline-block;
+}
+main aside .like img {
+  width: 100%;
+}
+main aside h1 {
+  padding: 20px 0;
+  font-weight: 700;
+}
+main aside dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+}
+main aside dl > * {
+  margin: 20px 0;
+}
+main aside dl dt {
+  font-size: 1rem;
+  color: #222;
+  text-transform: uppercase;
+}
+main aside dl dd {
+  text-align: right;
+}
+main aside dl dd del {
+  color: #aaa;
+}
+main aside dl dd #color_select {
+  padding: 10px 70px;
+  font-size: 0.875rem;
+  border: 1px solid #aaa;
+}
+main aside dl dd #heel_select {
+  padding: 10px 70px;
+  font-size: 0.875rem;
+  border: 1px solid #aaa;
+}
+main aside dl dd #size_select {
+  padding: 10px 70px;
+  font-size: 0.875rem;
+  border: 1px solid #aaa;
+}
+main aside .order {
+  overflow: hidden;
+}
+main aside .order .price_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 20px 5px;
+  color: #ff7f50;
+}
+main aside .order .price_wrap h2 {
+  font-size: 1.5rem;
+}
+main aside .order .price_wrap p {
+  font-size: 1.5rem;
+}
+main aside .order .price_wrap p span {
+  font-size: 1.5rem;
+}
+main aside .order #buy {
+  display: block;
+  background: #ff7f50;
+  color: #fff;
+  font-weight: 600;
+  width: 380px;
+  height: 70px;
+  text-transform: uppercase;
+}
+main aside .order #cart {
+  color: #ff7f50;
+  border: 1px solid #ff7f50;
+  float: left;
+  width: 47%;
+  font-weight: 600;
+  padding: 15px;
+  margin: 5px 0;
+}
+main aside .order #view {
+  float: right;
+  padding: 15px;
+  margin: 5px 0;
+  width: 47%;
+  border: 1px solid #ff7f50;
+  font-weight: 600;
+}
+main aside .review {
+  border: 1px dashed #222;
+  padding: 20px;
+}/*# sourceMappingURL=sub.css.map */

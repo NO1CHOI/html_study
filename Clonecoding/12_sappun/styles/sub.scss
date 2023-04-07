@@ -1,0 +1,102 @@
+//변수 지정
+$wh:#fff;
+$borderColor:#ff7f50;
+$txt1Color:#222;
+$bgColor:#eee;
+$bestColor:#ffe4c4;
+$orderColor:#000080;
+$txt2Color:#aaa;
+$order_bar:#ff69b4;
+//전체 width: 1200px ; 주문영역 width: 380px
+//container 의 너비값은 calc 계산법을 이용 380을 뺀 나머지 처리하기.
+
+main {width:1200px;background:lightcoral;
+    margin:0 auto;
+    display:flex;
+    flex-flow:row-nowrap;
+    .container {background: lightblue;
+        width:calc(100% - 380px);
+    }//container
+    aside {
+        background: lemonchiffon; 
+        width:380px; height:100vh;
+        position:sticky; top:0;
+        .like {display:inline-block;
+            img{width:100%}}//a
+        h1 {padding:20px 0; font-weight: 700;}//h1
+        dl {display:grid;
+            grid-template-columns: repeat(2,1fr);
+            // align-items:center;
+            padding-bottom: 20px;
+            border-bottom:1px solid $txt2Color;
+            > * {margin:20px 0;}
+            dt {font-size:1rem;
+                color:$txt1Color;
+                text-transform:uppercase;
+                
+            }//dt
+            dd {text-align: right;
+                
+                del {color:$txt2Color}//del
+                #color_select {
+                    padding:10px 70px; font-size:0.875rem;
+                    border:1px solid $txt2Color;
+                    option{}
+                }
+                #heel_select {
+                    padding:10px 70px; font-size:0.875rem;
+                    border:1px solid $txt2Color;
+                    option{}}
+                #size_select {
+                    padding:10px 70px; font-size:0.875rem;
+                    border:1px solid $txt2Color;
+                    option{}}
+            }//dd
+        }//dl
+        .order {       
+            overflow: hidden;
+            .price_wrap {
+                display:flex;
+                flex-flow:row nowrap;
+                justify-content: space-between;
+                padding:20px 5px;
+                color:$borderColor;
+                h2 {font-size:1.5rem;}
+                p {font-size:1.5rem;
+                    span{font-size:1.5rem;}}
+            }//price
+            #buy {
+                display: block;
+                background: $borderColor;
+                color:$wh;
+                font-weight: 600;
+                width:380px;height: 70px;
+                text-transform: uppercase;
+            }
+            #cart {
+                color:$borderColor;
+                border:1px solid $borderColor;
+                float: left;
+                width:47%;
+                font-weight: 600;
+                padding: 15px; margin:5px 0;
+            }
+            #view {
+                float:right;
+                padding: 15px; margin:5px 0;
+                width: 47%;
+                border:1px solid $borderColor;
+                font-weight: 600;
+            }
+        }//order
+        // 너 여기까지했어 기억해 -------------
+        .review {
+            border:1px dashed  $txt1Color;
+            padding:20px;
+            p {}
+            a {}
+            .helper {}
+            .box {.bar{}}
+        }
+    }//aside
+}//main
