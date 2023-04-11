@@ -1,0 +1,55 @@
+//색상변수
+$point1:#189bfa;
+$point2:#ff5252;
+$star:#ff9e06;
+$bg1:#eee;
+$bg2:#fff;
+$txt1:#aaa;
+$txt2:#222;
+$txt3:#000;
+//14px : 0.875rem
+//common.css 통합 = header,footer Design
+//main.css = Main Design
+//resposive.css = 반응형 Design
+#h_bg {
+    background:$bg2;
+    position:fixed;left:0;top:0;z-index:999;
+    box-shadow:0 1px 10px rgba(0,0,0,0.2); 
+    width:100%;
+    
+    header{
+        height:104px;width:1224px; margin:0 auto;
+        // background: lightcoral;
+        display:flex; justify-content: space-between; align-items: center;
+        h1 {a{img{}}}
+        .right {
+            nav {
+                a{font-size:0.875rem;font-weight: 700;color: #222;margin-left:10px;}
+                a:hover {color:#189bfa;}
+                a:last-child:hover{color:$bg2;background-color: $point2;}
+                a:nth-child(1){}
+                a:nth-child(2){
+                    background: url(/image/banner_gray2.png) no-repeat;
+                    background-size:20px;
+                    padding-left:25px;
+                }
+                a:nth-child(3){}
+                a:nth-child(3)::before{
+                    content:'';display:inline-block;
+                    background: url(../image/language.png) no-repeat;
+                    background-size: 20px;
+                    width:20px;height: 20px;
+                    margin-right:5px;
+                    position:relative; top:5px;
+                }
+                a:nth-child(4){i{font-weight: 600;}}
+                .all_nav {
+                    background:url(../image/allMenu.png) no-repeat 5px center $point1;
+                    background-position: 12px 12px;
+                    color: $bg2; padding:10px 5px 10px 40px;
+                    font-size:1.2rem;
+                }
+            }
+        }//.right
+    }//header
+}//h_bg
