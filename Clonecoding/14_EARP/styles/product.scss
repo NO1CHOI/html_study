@@ -1,0 +1,99 @@
+//전체 설정값 1200px 
+//이미지 부분 500 px 나머지 부분 calc 
+
+$font28:1.75rem;
+$font26:1.625rem;
+$font22:1.375rem;
+$font18:1.125rem;
+$font14:0.875rem;
+$color1:#00a0e2;
+$color2:#ff3000;
+$color3:#222;
+$color4:#fff;
+$weight:700;
+
+//main ---path
+main {
+    background: lightcyan;
+    width:1200px;margin:0 auto;
+    .path {padding: 50px 0;
+        dd {
+            a{color:$color1;font-size: 1.125rem;
+                em {font-weight:$weight; color:$color1;}
+            }
+            a:after {
+                content:''; display:inline-block;
+                background: url(../images/navigate_next.png) no-repeat;
+                width:24px;height: 24px;
+                position:relative; top:6px;
+                padding:0 5px;margin:0 20px;
+            }
+            a:last-child::after {display:none;}
+        }
+    }//path
+    #order {
+        display:flex;
+        justify-content: space-between;
+        .product_img{
+            width: 500px;
+            background: lightblue;
+            display:flex;
+            flex-flow:column nowrap;
+            .big {
+                img {width:100%;}
+            }
+            .thum {
+                margin-top:15px;
+                display: flex;
+                justify-content: space-between;
+                a {width: 150px; height: 150px;
+                    overflow: hidden;
+                    img {height:100%;}
+                }
+            }
+        }
+        .order_contents {
+            width:calc(100% - 550px);
+            background: lemonchiffon;
+            h1 {font-weight: $weight; font-size:$font28;}
+            h1+p {padding:10px 0;
+                del{font-size: $font22;}
+            }
+            .price {font-size:$font28;font-weight: $weight;padding-bottom: 25px;}
+            .deliver {padding: 20px 0;border-top:1px solid black;
+                em {font-weight: $weight;}
+                span {padding-left:20px; color:#333;}
+                }
+            h2 {font-size:$font22; font-weight: $weight;margin:0 0 10px;}
+            select  {width:100%;padding:10px; border: 1px solid $color3; margin:10px 0;}
+            // #brand {width:100%;padding:10px;}
+            // #galaxy {width:100%;padding:10px; margin:10px 0;}
+            // #iphone {width:100%;padding:10px;margin:10px 0;}
+            .order_list {
+                border-top:1px solid black;
+                border-bottom:1px solid black;
+                padding:10px 0;
+                display:grid;
+                align-items: center;
+                grid-template-columns: 1fr 50px 50px 150px;
+                // display:flex;
+                // justify-content: space-between;
+                // line-height: 20px;
+                .order_product {p {line-height: 1.5; font-size:$font14;}}
+                input {}
+                #cancel {}
+                em {font-weight: $weight;span{font-weight: $weight;}}
+                }
+                .total {padding:10px 0 15px; 
+                    h2 {font-weight: $weight;}
+                    p {}
+                }
+                .btn {
+                    display:grid;
+                    grid-template-columns: repeat(3,32%);
+                    justify-content: space-between;
+                    button {img{width: 100%;}}
+                }
+            }//order-contents
+    }//#order
+}//main
