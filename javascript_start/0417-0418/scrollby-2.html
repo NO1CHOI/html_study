@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll_by_2</title>
+    <style>
+    #wrap {
+        width:500px;height: 250px;        
+        overflow-x:auto;
+        overflow-y:hidden;
+    }
+    #box {width:max-content;display:flex;}
+    #box > div {width:500px;height: 250px;}
+    #box .a {background: lightblue;}
+    #box .b {background: lemonchiffon;}
+    #box .c {background: lightpink;}
+    #box .d {background: lightgreen;}
+    </style>
+</head>
+<body>
+    <button type="button" id="top">좌</button>
+    <button type="button" id="btm">우</button>
+    <div id="wrap">
+        <div id="box">
+            <div class="a">a</div>
+            <div class="b">b</div>
+            <div class="c">c</div>
+            <div class="d">d</div>
+        </div>
+    </div>
+    
+    <script>
+
+        const top_btn = document.querySelector('#top')
+        const btm_btn = document.querySelector('#btm')
+        const box = document.querySelector('#wrap')
+        console.log(top_btn,btm_btn)
+
+        btm_btn.addEventListener('click',()=>{
+            box.scrollBy(500,0)
+        })
+        top_btn.addEventListener('click',()=>{
+            box.scrollBy(-500,0)
+        })
+
+    </script>
+</body>
+</html>
