@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interior-1</title>
+    <style>
+        body,html {scroll-behavior:smooth;}
+        * {box-sizing:border-box; margin:0; padding:0;}
+        a {text-decoration: none;}
+        main section {height:100vh; background-size:cover; background-position:center;}
+        main .s1 {background-image:url(./images/bg1.jpg);}
+        main .s2 {background-image:url(./images/bg2.jpg);}
+        main .s3 {background-image:url(./images/bg3.jpg);}
+        main .s4 {background-image:url(./images/bg4.jpg);}
+        .link {
+            display:flex; flex-flow:column wrap;
+            position:fixed;  right:50px; top:50%;
+        }
+        .link a {
+            background:#222; color:#fff;
+            border-radius:50%; width:30px; height:30px;
+            overflow:hidden;
+            transition:all 0.5s;
+            position:absolute; right:0;
+        }
+        .link a:hover {
+            background:rgba(0,0,0,0.5); 
+            text-indent:0; width:100px; border-radius:10px;
+        }
+        .link a::after {
+            position:absolute; 
+            line-height:30px; right:10px;
+            white-space:nowrap;
+            font-size:0.85rem;display:block;
+        }
+        .link a:nth-child(1):hover::after {content:'Interior A.';}
+        .link a:nth-child(2):hover::after {content:'Interior B.';}
+        .link a:nth-child(3):hover::after {content:'Interior C.';}
+        .link a:nth-child(4):hover::after {content:'Interior D.';}
+        .link a:nth-child(1) {top:0;}
+        .link a:nth-child(2) {top:35px;}
+        .link a:nth-child(3) {top:70px;}
+        .link a:nth-child(4) {top:105px;}
+    </style>
+</head>
+<body>
+    <div class="link">
+        <a href="#" class="a" title="인테리어 a형 보기"></a>
+        <a href="#" class="b" title="인테리어 b형 보기"></a>
+        <a href="#" class="c" title="인테리어 c형 보기"></a>
+        <a href="#" class="d" title="인테리어 d형 보기"></a>
+    </div>
+    <main>
+        <section class="s1"></section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <section class="s4"></section>
+    </main>
+
+    <script>
+        //변수
+        const link = document.querySelectorAll('.link a')
+        const section = document.querySelectorAll('main > section')
+        console.log(link,section)
+
+        //link-a 첫번째 클릭 -> main section 첫번째 이동
+        for(let i in section){
+            console.log(section[i].offsetTop)
+        }
+
+        link.forEach((obj, index)=>{
+            console.log(obj,index)
+            obj.addEventListener('click',(event)=>{
+                event.preventDefault()
+                window.scrollTo(0,section[index].offsetTop)
+            })
+        })
+
+    </script>
+
+</body>
+</html>

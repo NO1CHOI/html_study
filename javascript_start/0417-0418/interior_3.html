@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interior-1</title>
+    <style>
+        body,html {scroll-behavior:smooth;}
+        * {box-sizing:border-box; margin:0; padding:0;}
+        a {text-decoration: none;}
+
+        header {position:fixed; left:0; top:0; width:100%;}
+        header h1 {padding:10px;}
+        header nav {}
+        header nav a {
+            display:inline-block; line-height:50px;
+            color:#222; padding:0 10px;
+        }
+        main section {height:100vh; background-size:cover; background-position:center;}
+        main .s1 {background-image:url(./images/bg1.jpg);}
+        main .s2 {background-image:url(./images/bg2.jpg);}
+        main .s3 {background-image:url(./images/bg3.jpg);}
+        main .s4 {background-image:url(./images/bg4.jpg);}
+        
+        aside {
+            display:flex; flex-flow:column nowrap;
+            position:fixed; left:10px; top:40%;
+        }
+        aside .bar {
+            width:25px; height:3px; 
+            background:#222; margin-bottom:20px;
+        }
+        aside .bar_active {width:200px; background:#fff;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interior view</h1>
+        <nav>
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+            <a href="#">d</a>
+        </nav>
+    </header>
+    <aside>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </aside>
+    <main>
+        <section class="s1"></section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <section class="s4"></section>
+    </main>
+    <script>
+
+        const nav = document.querySelectorAll('nav a')
+        const section = document.querySelectorAll('section')
+        const bar = document.querySelectorAll('aside .bar')
+        console.log(nav, section, bar)
+
+        for(let i of bar){i.style.transition='all 0.3s'}
+        bar_reset(0) //초기 bar
+        window.addEventListener('scroll',()=>{
+            if(window.pageYOffset >= section[0].offsetTop){bar_reset(0)}
+            if(window.pageYOffset >= section[1].offsetTop-200){bar_reset(1)}
+            if(window.pageYOffset >= section[2].offsetTop-200){bar_reset(2)}
+            if(window.pageYOffset >= section[3].offsetTop-200){bar_reset(3)}
+        })
+        function bar_reset(num){
+            for(let i of bar){i.classList.remove('bar_active')}
+            bar[num].classList.add('bar_active')
+        }
+        nav.forEach((target,index)=>{
+            target.addEventListener('click',(e)=>{
+                e.preventDefault()
+                window.scrollTo(0,section[index].offsetTop)
+            })
+        })
+
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interior-3</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .cursor {}
+        header {position:fixed;left: 50px;top:70px;}
+        header h1 {font-size:3rem;font-weight: 600;}
+        header nav {padding:20px;}
+        header nav a {font-size:1.2rem;padding:10px;color:#222;}
+        /* main------------------- */
+        main {}
+        main .wrap {position:fixed;left:50px;top:60%;}
+        main .wrap a {position:relative;}
+        main .wrap a span {
+            display:block; background: black;
+            width: 25px;height: 3px; margin:10px;
+            border-radius: 20px;
+            transform: scaleX(1);
+            transition:all 0.5s;
+        }
+        main .wrap a span:hover {
+            content:''; display:block; background: #fff;
+            width: 100px; height:3px;margin:10px;
+            border-radius: 20px;
+            transform: scaleX(1);
+        }
+        main section {height:100vh; background-size:cover; background-position:center;}
+        main .s1 {background-image:url(./images/bg1.jpg);}
+        main .s2 {background-image:url(./images/bg2.jpg);}
+        main .s3 {background-image:url(./images/bg3.jpg);}
+        main .s4 {background-image:url(./images/bg4.jpg);}
+
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+        <h1>Interior View</h1>
+        <nav>
+            <a href="#" class="a">A</a>
+            <a href="#" class="b">B</a>
+            <a href="#" class="c">C</a>
+            <a href="#" class="d">D</a>
+        </nav>
+    </header>
+    <!-- <aside>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </aside> -->
+    <main>
+        <div class="wrap">
+            <a href="#"><span></span></a>
+            <a href="#"><span></span></a>
+            <a href="#"><span></span></a>
+            <a href="#"><span></span></a>
+        </div>
+        <section class="s1"></section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <section class="s4"></section>
+    </main>
+
+    <script>
+        //변수
+        const nav = document.querySelectorAll('nav a')
+        const section = document.querySelectorAll('section')
+        const bar = document.querySelectorAll('.wrap a span')
+        console.log(nav. section. bar)
+
+        //이벤트
+        bar_reset(0)//초기 bar 선언
+        window.addEventListener('scroll',()=>{
+            if(window.pageYOffset >= section[0].offsetTop){bar_reset(0)}
+            if(window.pageYOffset >= section[1].offsetTop -200){bar_reset(1)}
+            if(window.pageYOffset >= section[2].offsetTop -200){bar_reset(2)}
+            if(window.pageYOffset >= section[3].offsetTop -200){bar_reset(3)}
+        })
+
+        //함수
+        function bar_reset(num){
+            for(let i of wrap){i.classList.remove('bar_active')}
+            bar[num].classList.add('bar_active')
+        }
+
+        nav.forEach((target,index)=>{
+            target.addEventListener('click',(e)=>{
+                e.preventDefault()
+                window.scrollTo(0,section[index].offsetTop)
+            })
+        })
+    </script>
+</body>
+</html> -->
