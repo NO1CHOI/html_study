@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horizontal-4</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        * {font-family: 'Noto Sans KR';}
+        header {}
+        main {}
+        main section {}
+        main .first, main .last {
+            background: #222; color: #fff; font-size: 7rem;
+            line-height: 100vh; width: 100%; text-align: center;
+            text-transform: capitalize;
+        }
+        main .first {}
+        /* 스크롤 영역 디자인 */
+        main .scroll_wrap {/* 여백,색상,배경이미지 */background: #f1f1f1;}
+        main .scroll_wrap .height {
+            /* 스크롤 되는 실제 높이값(vh) */
+            height: 400vh;
+        }
+        main .scroll_wrap .height .sticky {
+            background: url(./images/airpods.jpg) no-repeat;
+            position: sticky;top:0;
+        }
+        main .scroll_wrap .height .sticky .container {}
+        main .scroll_wrap .height .sticky .container h1 {
+            font-family: 'Satisfy';font-size: 20rem;padding:100px;
+            white-space: nowrap;/* 강제 줄바꿈 없애기 가로로 길게 써줌 */
+        }
+        main .last {}
+        footer {}
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>
+        <section class="first">First Section</section>
+        <!-- 스크롤 구간 시작 (태크 x 층 o) -->
+        <section class="scroll_wrap"> <!--전체틀--> 
+            <div class="height"><!--스크롤 높이-->
+                <div class="sticky"><!--고정대상-->
+                    <div class="container"><!--내용삽입위치-->
+                        <h1>Hello Horizontal Scroll And Javascript,CSS,Sass,HTML</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 스크롤 구간 종료 -->
+        <section class="last">Last Section</section>
+    </main>
+    <footer>Footer</footer>
+
+    <script>
+        //변수
+        const scroll_wrap = document.querySelector('.scroll_wrap')
+        const scroll_container = document.querySelector('.scroll_wrap .container')
+
+        //이벤트
+        window.addEventListener('scroll',()=>{
+
+            //1.윈도우에서 얼마나 스크롤 되었는가?
+            let yOffset = window.scrollY
+            console.log(`Yoffset=>${yOffset}`)
+            //2.스크롤 요소 기준으로 얼마나 스크롤 하고있는가?
+            console.log(`scrollWrap 위치 => ${scroll_wrap.offsetTop}`)
+            console.log(`scrollWrap 기준 스크롤값 => ${yOffset - scroll_wrap.offsetTop}`)
+            let amount = yOffset - scroll_wrap.offsetTop
+
+            if(/* scroll_wrap.offsetTop = '0' */yOffset >= scroll_wrap.offsetTop){
+                scroll_container.style.transform = `translateX(-${amount}px)`
+            }else {
+                scroll_container.style.transform = 'translateX(0px)' //넣어도괜찮 안넣어도
+            }
+
+        })//scroll end
+
+
+    </script>
+</body>
+</html>

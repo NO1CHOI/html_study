@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video-4-cat</title>
+    <style>
+        * {box-sizing: border-box;margin:0; padding:0;}
+        body {height:500vh; overflow-x:hidden;}
+        .container {
+            position:fixed; left:0; top:0;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./video2/1.jpg" alt="">
+    </div>
+
+    <script>
+        const img = document.querySelector('.conntainer img')
+        let total = 10
+        let videoImages = []
+
+        setImages()
+        init()
+        function setImages(){
+            for(let i=1; i<=total; i++){
+                let imgE = document.createElement('img')
+                imgE.src = `./images/video2/${i}.jpg`
+                console.log(imgE)
+                videoImages.push(imgE)
+            }
+        }
+        function init(){
+            window.addEventListener('scroll',()=>{
+                let progress = pageYOffset / (document.body.offsetHeight - window.innerHeight)
+                let currentFrame = Math.round((total-1) * progress)
+                img.src =videoImages[currentFrame].src
+            })
+        }
+    </script>
+</body>
+</html>
