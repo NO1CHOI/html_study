@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer-6</title>
+    <style>
+        main {
+            display:flex; flex-flow:column;justify-content: center;
+            text-align: center;
+        }
+        main .number {font-size:5rem; font-weight: 600;}
+        #pause {padding:20px;}
+        #play {padding:20px;}
+    </style>
+</head>
+<body>
+    <main>
+        <p>3초후 폭탄이 터집니다. 취소버튼 언제나 준비 완료</p>
+        <div class="number"><!-- 카운트 다운 321 표시 --></div>
+        <button type="button" id="pause">취 소</button>
+        <button type="button" id="play"> 버 튼</button>
+    </main>
+
+    <script>    
+    //변수
+    const number = document.querySelector('.number')
+    const pause = document.querySelector('#pause')
+    const play = document.querySelector('#play')
+
+    let count = 3
+
+    let count_timer = setInterval(count_timer_func,1000)
+    let count_timer2 = setTimeout(count_timer_func2,3000)
+
+    number.innerHTML = count
+
+    //이벤트
+
+    pause.addEventListener('click',()=>{
+        clearInterval(count_timer)
+        clearTimeout(count_timer2)
+    })
+
+    play.addEventListener('click',()=>{
+        let count = 3
+        number.innerHTML = count
+        let count_timer = setInterval(count_timer_func,1000)
+        let count_timer2 = setTimeout(count_timer_func2,3000)
+    })
+
+    //함수
+    function count_timer_func2(){
+        window.location = 'http://google.com'
+    } //타이머가 다 되면 이동하는 함수
+
+    function count_timer_func(){
+        if(count>0){
+            count--
+            number.innerHTML = count
+    }}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer-2</title>
+    <style>
+        * {box-sizing: border-box; margin: 0; padding: 0;}
+        #slider_wrap {
+            border:5px solid #000;
+            width: 700px;/* overflow: hidden; */
+        }
+
+        #slider_wrap #slider_container {
+            display: flex; width: max-content;
+            transition:transform 0.5s;
+            /* transform: translateX(0);
+            transform: translateX(-700px);
+            transform: translateX(-1400px); */
+        }
+        #slider_wrap #slider_container .slide {
+            line-height: 200px; width: 700px; 
+            font-size: 5rem; text-align: center;
+        }
+        #slider_wrap #slider_container .slide1 {background: lightblue;}
+        #slider_wrap #slider_container .slide2 {background: lemonchiffon;}
+        #slider_wrap #slider_container .slide3 {background: lightcoral;}
+    </style>
+</head>
+<body>
+    <div id="slider_wrap">
+        <div id="slider_container">
+            <div class="slide slide1">1</div>
+            <div class="slide slide2">2</div>
+            <div class="slide slide3">3</div>
+        </div>
+    </div>
+
+    <script>
+
+        //변수
+        let num = 0
+        const slide = document.querySelector('#slider_container')
+        //슬라이드 자식의 너비
+        console.log(slide.firstElementChild.offsetWidth)//700
+        console.log(slide.children[0].offsetWidth)//700
+
+        //슬라이드의 자식 갯수 확인하기
+        console.log(slide.children.length)
+        console.log(slide.childElementCount)
+    
+        let count = slide.children.length-1
+        let slide_w = slide.firstElementChild.offsetWidth
+
+        setInterval(()=>{
+            num++
+            if(num>count){num=0}
+            console.log('사랑해요~'+num) //12012012012021202.....
+            // slide.style.transform = `translateX(${-700*num}px)`
+            slide.style.transform = `translateX(${-slide_w*num}px)`
+        },1000)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client2</title>
+    <style>
+        body,html {cursor:none;}
+        .circle {
+            width:60px; height:60px; border-radius: 50%;
+            /* border:2px solid #222; */
+            position:fixed;left:0;top:0;
+            transform:translate(-50%,-50%); /* 중심맞추기 */
+            /* transition: all 0.2s ease; */
+        }
+        .circle img {width:100%;}
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <img src="./images/9080515_click_icon.png" alt="">
+    </div>
+    
+    <script>
+        //변수
+        const circle = document.querySelector('.circle')
+        //이벤트
+        window.addEventListener('mousemove',(e)=>{
+            circle.style.left = `${e.clientX}px`
+            circle.style.top = `${e.clientY}px`
+        })
+    </script>
+</body>
+</html>

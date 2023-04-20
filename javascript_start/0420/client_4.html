@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body {background: #222;}
+        nav {
+            background:#fff;
+            text-align: center;padding:50px;
+        }
+        nav a {
+            margin:30px;
+            font-weight: 600;color:#222;
+            position:relative; z-index: 10;
+        }
+        nav a:hover {color:rgb(153, 152, 152);}
+        .cursor {
+            pointer-events: none;
+            width:50px; height: 50px; border-radius: 50%;
+            position:fixed;left:0;top:0;
+            border:2px solid gray;
+            transform:background 0.5s;
+            /* transform: translate(-50%,-50%); */
+        }
+
+        /* 마우스 커서 이벤트 */
+        .cursor_style1 {
+            background: #222;border:none;
+            scale: 2;z-index: 9;
+        }
+        .cursor_style2 {
+            background: #333;border:none;
+            z-index: -1; scale: 2;
+        }
+
+        .main {text-align: center;padding-top:100px;}
+        .main p:first-child {color:#fff;font-size:2rem; font-weight: 600;}
+        .main p {color:#fff;padding:20px;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">PROJECT-WEB</a>
+        <a href="#">PROJECT-DESIGN</a>
+        <a href="#">ABOUT ME</a>
+    </nav>
+    <div class="cursor"></div>
+    <div class="main">
+        <p>Portfolio 2023</p>
+        <p>웹 디자이너 최현아 포트폴리오 사이트입니다.</p>
+    </div>
+
+    <script>
+        //변수
+        const nav_a = document.querySelectorAll('nav a')
+        const main_p = document.querySelectorAll('.main p')
+        const cursor = document.querySelector('.cursor')
+
+        //이벤트
+        //마우스 이동 이벤트
+        window.addEventListener('mousemove',(e)=>{
+            cursor.style.left = `${e.clientX}px`
+            cursor.style.top = `${e.clientY}px`
+        })
+
+        //마우스 over&out이벤트
+        for(let i of nav_a){
+            i.addEventListener('mouseover',()=>{
+                cursor.classList.add('cursor_style1')
+            })
+            i.addEventListener('mouseout',()=>{
+                cursor.classList.remove('cursor_style1')
+            })
+        }
+
+        for(let i of main_p){
+            i.addEventListener('mouseover',()=>{
+                cursor.classList.add('cursor_style2')
+            })
+            i.addEventListener('mouseout',()=>{
+                cursor.classList.remove('cursor_style2')
+            })
+        }
+
+    </script>
+</body>
+</html>
