@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-7</title>
+    <!-- swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js" integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css" integrity="sha512-0x5peylECh6ad58xDrjrNZL87Zhg9rdda76yOOHrfGr41VSEwUNmYaK72U/JVScMbSWG1n4Vj35LGmq8ggsqaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- design -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+    
+    /* 
+    swiper plugin 적용 시 slide css 를 미리 작성하지 않는다.
+    swiper css 가 적용하는 css와 충돌방지를 위해 슬라이스 디자인 시에는 반드시 서로 비교하며 동시 디자인 한다.
+    */
+    .swiper {width:1000px;}
+    /* margin:0 auto, overflow:hidden 기본값 */
+    .swiper .swiper-wrapper {}
+    /* transition,transform 기본값 */
+    .swiper .swiper-wrapper .swiper-slide {}
+    /* width,height 100% , positionLrelative 기본값 */
+    .swiper .swiper-wrapper .swiper-slide img {width:100%;}
+
+    /* preb,next */
+    .swiper .swiper-button-prev, .swiper .swiper-button-next {}
+    .swiper .swiper-button-prev {left:0;}
+    .swiper .swiper-button-next {right:0;}
+
+    .wrap {background: lightblue; height: 500px; width: 90%;position: relative;margin:0 auto;}
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- swiper main -->
+        <div class="swiper">
+            <!-- s:swiper slide wrap -->
+            <div class="swiper-wrapper">
+                <!-- s:swiper -->
+                <div class="swiper-slide slide1"><img src="./images/bnr1.jpg" alt=""></div>
+                <div class="swiper-slide slide2"><img src="./images/bnr2.jpg" alt=""></div>
+                <div class="swiper-slide slide3"><img src="./images/bnr3.jpg" alt=""></div>
+                <div class="swiper-slide slide4"><img src="./images/bnr4.jpg" alt=""></div>
+                <!-- e:swiper -->
+            </div>
+            <!-- e:swiper slide wrap -->
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    
+    <script>
+
+        //기본 swiper 문법
+        //const 변수명 = new Swiper('적용대상',{속성:값})
+        
+        //적용대상은 swiper의 가장 큰 부모 대상(swiper-wrapper의 부모)
+        const swiper1 = new Swiper('.swiper',{
+            navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        })
+
+    </script>
+</body>
+</html>
