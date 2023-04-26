@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full-2</title>
+    <!-- Fullpage CDN(필수 최신버전 기준) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css" integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {margin:0; padding:0;box-sizing: border-box;}
+        main {}
+        main .section {
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        main .s1 {background-image: url(./images/bg1.jpg);}
+        main .s2 {background-image: url(./images/bg2.jpg);}
+        main .s3 {background-image: url(./images/bg3.jpg);}
+        main .s4 {background-image: url(./images/bg4.jpg);}
+
+        main .s2 .container {height: 300px;background: rgba(225,225,225,0.5);}
+        main .s2 .container h1 {font-size: 3rem;}
+        .gnb {
+            position:fixed;left:50px;top:50px;z-index: 999;
+        }
+        .gnb a {
+            background: #fff; margin-right:20px;
+            text-decoration: none;color:black;
+            border-radius: 20px;display:inline-block;padding: 20px;
+        }
+        </style>
+</head>
+<body>
+    <nav class="gnb">
+        <a href="#se1">slide1</a>
+        <a href="#se2">slide2</a>
+        <a href="#se3">slide3</a>
+        <a href="#se4"><img src="./images/3792067_cat_halloween_kitty_witch_icon.png" alt=""></a>
+    </nav>
+    <main>
+        <!-- fullpage 적용대상의 클래스 명 section 필수 -->
+        <div class="section s1">A</div>
+        <div class="section s2 fp-auto-height">
+            <div class="container">
+                <h1>FullPage JS를 이용한 높이지정방법</h1>
+            </div>
+        </div>
+        <div class="section s3">C</div>
+        <div class="section s4">D</div>
+    </main>
+
+    <script>
+
+        //기본 fullPage 문법
+        //const 변수명 = new fullpage('대상',{속성:값, 속성:값})
+        const full = new fullpage('main',{
+            scrollBar:true,//스크롤바 표시
+            scrollingSpeed:1000,
+            menu:'.gnb',//메뉴대상지정
+            anchors:['se1','se2','se3','se4'],//메뉴 클릭시 이동 위치 지정
+            navigation:true,//네비게이션 표시
+            navigationTooltips:['어쩔티비','치킨','좋아요~','이뻐요'],//툴팁표시 글자
+            showactiveTooltip:true//툴팁표시
+        })
+
+    </script>
+</body>
+</html>

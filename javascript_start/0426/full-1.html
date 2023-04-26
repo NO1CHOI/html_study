@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full-1</title>
+    <!-- Fullpage CDN(필수 최신버전 기준) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css" integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {margin:0; padding:0;box-sizing: border-box;}
+        main {}
+        main .section {background-size: cover;}
+        main .s1 {background-image: url(./images/bg1.jpg);}
+        main .s2 {background-image: url(./images/bg2.jpg);}
+        main .s3 {background-image: url(./images/bg3.jpg);}
+        main .s4 {background-image: url(./images/bg4.jpg);}
+    </style>
+</head>
+<body>
+    <main>
+        <!-- fullpage 적용대상의 클래스 명 section 필수 -->
+        <div class="section s1">A</div>
+        <div class="section s2">B</div>
+        <div class="section s3">C</div>
+        <div class="section s4">D</div>
+    </main>
+
+    <script>
+
+        //기본 fullPage 문법
+        //const 변수명 = new fullpage('적용대상 부모명')
+        const full = new fullpage('main')
+
+    </script>
+</body>
+</html>

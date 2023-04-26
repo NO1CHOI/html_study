@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        #project_view {
+            position:fixed;left: 0;top: 0;z-index: 999;
+            background: rgba(0,0,0,0.7);
+            /* background: black; */
+            width: 100%;height: 100vh;
+        }
+        #project_view .contents {
+            width: 1000px; margin: 50px auto 0;
+            background: lightblue;height: 90vh;overflow: scroll;
+            cursor:pointer;
+        }
+        #project_view .contents img {width: 100%;}
+
+    </style>
+</head>
+<body>
+    <div id="project_view">
+        <div class="contents" title="클릭시 닫혀요~">
+            <!-- <img src="" alt=""> -->
+        </div>
+    </div>
+    <div class="project_wrap">
+        <div class="web">
+            <a href="./full-1.html">Web1 프로젝트 보기</a>
+            <a href="./full-2.html">Web2 프로젝트 보기</a>
+        </div>
+        <div class="sns">
+            <a href="#">sns1 보기</a>
+            <a href="#">sns2 보기</a>
+        </div>
+    </div>
+    <script>
+
+        const view = document.querySelector('#project_view')
+        const sns = document.querySelectorAll('.sns a')
+        let imgT = document.createElement('img')
+
+        const contents = document.querySelector('.contents')
+
+        
+        console.log(view, sns,imgT)
+        view.style.display = 'none'
+
+
+        sns.forEach((t,i)=>{
+            t.addEventListener('click',(e)=>{
+                e.preventDefault()//href 막기
+                imgT.src = `./images/sns${i+1}.jpg`
+                console.log(imgT)
+                view.style.display='block'
+                contents.appendChild(imgT)
+            })
+        })
+        view.addEventListener('click',()=>{
+            view.style.display='none'
+        })
+    </script>
+</body>
+</html>

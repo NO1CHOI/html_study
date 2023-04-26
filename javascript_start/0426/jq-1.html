@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-1</title>
+    <!-- Jquery CDN (필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+    </nav>
+
+    <script>
+
+        //javascript DOM 명령을 쉽게 작성할수 있게 도와주는 Jquery
+
+        //js 
+        const nav_a_js = document.querySelectorAll('nav a')
+        console.log(nav_a_js)
+
+        for(let i of nav_a_js){
+            i.style.backgroundColor = '#ff0'
+            i.style.display = 'none'
+        }
+
+        //jquery ver
+        //if,for,while,switch,function js 동일
+        const nav_a_jq = $('nav a')
+        console.log(nav_a_jq)
+        nav_a_jq.css('background-color','#0ff')
+        nav_a_jq.show()//display ='block'
+        nav_a_jq.eq(0).hide()//eq?  ex번째 이 대상의 몇번째!
+        nav_a_jq.eq(2).fadeOut(2000)
+        nav_a_jq.eq(3).slideUp(1000)
+
+    </script>
+</body>
+</html>
