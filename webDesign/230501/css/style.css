@@ -1,0 +1,114 @@
+/*
+    주조색 : #0078d7;
+    보조색 : lightblue;
+*/
+
+
+
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+    margin:0; padding:0;list-style:none; text-decoration: none;
+    color:#333;
+}
+
+body, html {background: #fff;}
+
+/* .popup {display:none;} */
+/* .sub {display:none;} */
+/* ----popup -----*/
+#popup {
+    background: #0078d7;position:fixed;
+    left:50%;top:50%;transform: translate(-50%,-50%);
+    width: 500px;height: 400px; z-index: 999; padding:30px;
+}
+#popup h1 {color:#fff;}
+#popup p {color:#fff;}
+#popup .close {color:#fff; font-weight: 600;position:absolute;right:20px;bottom:20px;}
+
+
+/* ----header----- */
+.h_bg {/* background: lightblue; */border-bottom: :1px solid #aaa;}
+.h_bg header {
+    width:1200px;height: 100px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+.h_bg header h1 {width: 200px;height: 40px;}
+.h_bg header h1 a {}
+.h_bg header h1 a img {width: 100%;}
+.h_bg header nav {}
+.h_bg header nav > ul {display:flex;}
+.h_bg header nav > ul > li {
+    /* background: lemonchiffon; */
+    position:relative;
+}
+.h_bg header nav > ul > li > a {
+    display:block; line-height: 40px;width: 150px;text-align: center;
+    /* background:#0078d7;color:#fff; color:#fff; */font-weight: 700;
+}
+/*   메인메뉴중 하나에 마우스(mouseover) 하이라이트되고, 벗어나면 (mouse out)하이라이트 해제된다*/ 
+.h_bg header nav > ul > li > a:hover {
+    background: #0078d7;color:#fff; font-weight: 700;
+}
+.h_bg header nav > ul > li > .sub {
+    background:#fff;
+    position:absolute; width: 100%; height: 200px;
+}
+.h_bg header nav ul li > .sub > li {}
+.h_bg header nav ul li > .sub > li > a {
+    line-height: 40px; width: 100%; display: block;
+    text-align: center;
+}
+/* 서브에 마우스(mouseover) 하이라이트되고, 벗어나면 (mouse out)하이라이트 해제된다*/
+.h_bg header nav ul li > .sub > li > a:hover {
+    background: #0078d7;color:#fff;
+}
+
+/* -----main----- */
+main {width: 1200px;margin:0 auto;}
+main #slide_wrap {width: 1200px;height:300px; overflow: hidden;}
+/* 이미지가 좌에서 우 또는 우에서 좌 로 이동하면서 전환되어야 한다. 
+    위 조건 수행을 위한 정렬 css
+*/
+main #slide_wrap #slide_container {
+    display: flex;
+    /* 이동하면서 전환되어야한다. */
+    transition:all 0.5s;
+}
+main #slide_wrap #slide_container .slide {}
+main #slide_wrap #slide_container .slide img {}
+main .contents {width: 1200px;height:200px;display:flex;}
+main .contents > * {width: 400px;}
+main .contents .c1 {width: 400px; /* background: lemonchiffon; */}
+main .contents .c1 .title {display:flex;}
+main .contents .c1 .title h2 {margin:5px; padding:5px;}
+main .contents .c1 .title .active {
+    background: #0078d7; color:#fff; 
+}
+main .contents .notice {width: 400px;}
+main .contents .notice a {display:block;padding:3px 0; border-bottom:1px solid #333;}
+main .contents .gallery {width:400px;display: flex;display:none;}
+main .contents .gallery a {margin:15px;}
+main .contents .gallery a img {width: 100%;}
+main .contoents .contents {width: 400px;}
+main .contoents .contents a {}
+main .contoents .contents a img {width:100%;}
+/* --------main link bnr ----------- */
+main .contents a {}
+/*----------- footer ----------- */
+.f_bg {border-top:1px solid #aaa;/* background: lightcoral; */}
+.f_bg footer {
+    width:1200px;height: 100px;
+    margin:0 auto; align-items: center;
+    display:flex; justify-content: space-between;
+    
+}
+.f_bg footer .f_logo {width: 200px; height: 40px;}
+.f_bg footer .f_logo img {width: 100%;}
+.f_bg footer .btm {/* width:1000px; */ width:calc(100% - 200px);/* background: lightgray; */text-align: center;}
+.f_bg footer .btm .top {}
+.f_bg footer .btm .top a {padding:20px;}
+.f_bg footer .btm p {}
