@@ -1,0 +1,65 @@
+/* #5134a7 */
+
+@charset "utf-8";
+/* reset */
+* {box-sizing: border-box; margin:0; padding:0;list-style: none;}
+a {text-decoration: none;color:#333;}
+
+
+
+/* design */
+#popup {}
+#popup h1 {}
+#popup p {}
+#popup a {}
+/* wrap--------------------- */
+#wrap {display: flex;}
+#wrap header {width: 200px;}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header nav {width: 90%; margin:0 auto;/* padding:30px 15px 0; */}
+#wrap header nav > ul {}
+#wrap header nav > ul > li {}
+#wrap header nav > ul > li:hover {}
+#wrap header nav > ul > li a {display: block; text-align: center; padding:10px;}
+#wrap header nav > ul > li a:hover {background-color:#5134a7;color:#fff;}
+#wrap header nav > ul > li .sub {}
+#wrap header nav > ul > li .sub li {}
+#wrap header nav > ul > li .sub li a {}
+/* main --------------------------------------------------- */
+#wrap .right {width: 800px;}
+#wrap .right main {}
+#wrap .right main #slide_wrap {position:relative;width: 800px;height: 350px;}
+#wrap .right main #slide_wrap #slide_container {}
+#wrap .right main #slide_wrap #slide_container .slide {position:absolute;left:0;top:0;}
+#wrap .right main #slide_wrap #slide_container .slide img {}
+#wrap .right main #slide_wrap #slide_container .slide1 {}
+#wrap .right main #slide_wrap #slide_container .slide2 {}
+#wrap .right main #slide_wrap #slide_container .slide3 {}
+/* c_all----------------------------------------------- */
+#wrap .right main .c_all {display: flex;}
+#wrap .right main .c_all > * {width: 33.33%;}
+#wrap .right main .c_all .c12 {}
+#wrap .right main .c_all .c12 .title {}
+#wrap .right main .c_all .c12 .title a {}
+#wrap .right main .c_all .c12 .title a:hover {background-color:#5134a7;color:#fff;}
+#wrap .right main .c_all .c12 .contents {}
+#wrap .right main .c_all .c12 .contents .notice {}
+#wrap .right main .c_all .c12 .contents .notice a {
+    display: block;white-space:nowrap; padding:5px;
+}
+#wrap .right main .c_all .c12 .contents .gallery {display: flex;}
+#wrap .right main .c_all .c12 .contents .gallery a {}
+#wrap .right main .c_all .c12 .contents .gallery a img {width: 100%;}
+#wrap .right main .c_all .c3 {text-align: center;}
+#wrap .right main .c_all .c4 {text-align: center;}
+#wrap .right main a {}
+/* footer--------------------- */
+#wrap footer {display: flex;}
+#wrap footer > p {width: 200px;}
+#wrap footer > p img {}
+#wrap footer > .right {width: 800px;text-align: center;}
+#wrap footer > .right .top {}
+#wrap footer > .right .top a {}
+#wrap footer > .right p {}
